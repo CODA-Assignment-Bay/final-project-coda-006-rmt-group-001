@@ -43,10 +43,10 @@ generated_dates= date_range.select(
     explode(sequence(to_date(col("start_of_min_month")), to_date(col("end_of_max_month")))).alias("crash_date")
 )
 
-window = Window.orderBy("crash_date")
+window = Window.orderBy("date")
 
 Final_Date_Data = generated_dates.select(
-    col("crash_date"),
+    col("crash_date").alias("date"),
     year("crash_date").alias("crash_year"),
     month("crash_date").alias("crash_month"),
     dayofweek("crash_date").alias("crash_day_of_week")
@@ -59,7 +59,7 @@ Join_Final_Roadway_Data = Final_Roadway_Data.withColumnRenamed("id", "road_id")
 raw_data_alias = raw_data.alias("a")
 final_date_alias = Final_Date_Data.alias("b")
 
-Date_Temp = raw_data_alias.join(final_date_alias, raw_data_alias["crash_date"] == final_date_alias["crash_date"])
+Date_Temp = raw_data_alias.join(final_date_alias, raw_data_alias["crash_date"] == final_date_alias["date"])
 
 Crash_Temp = Date_Temp.join(Join_Final_Roadway_Data, (Date_Temp["trafficway_type"] == Join_Final_Roadway_Data["trafficway_type"])
                              & (Date_Temp["alignment"] == Join_Final_Roadway_Data["alignment"])
@@ -91,7 +91,7 @@ shutil.rmtree(tmp_path)
 
 print(f"Saved: {final_output_path}")
 
-Final_Date_Data = Final_Date_Data.orderBy("crash_date")
+Final_Date_Data = Final_Date_Data.orderBy("date")
 
 tmp_path = os.path.join("/opt/airflow/data", "_tmp_output")
 
