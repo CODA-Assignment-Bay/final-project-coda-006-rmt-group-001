@@ -40,7 +40,7 @@ dashboard2 = c.join(r, c["road_id"] == r["id"], "inner") \
         r["road_defect"]
     ) \
     .agg(
-        first(c["id"]).alias("sample_crash_id"),
+        count(c["id"]).alias("total_crashes"),
         avg("injuries_fatal").alias("avg_fatal_injuries"),
         sum("injuries_fatal").alias("sum_fatal_injuries"),
         sum("injuries_incapacitating").alias("total_injuries_incapacitating"),
@@ -48,6 +48,7 @@ dashboard2 = c.join(r, c["road_id"] == r["id"], "inner") \
         sum("injuries_reported_not_evident").alias("total_injuries_reported_not_evident"),
         sum("injuries_no_indication").alias("total_injuries_no_indication")
     )
+
 
 table_name = "dashboard1"
 
