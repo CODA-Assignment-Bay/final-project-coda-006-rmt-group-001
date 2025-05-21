@@ -1,59 +1,64 @@
 # -- Import Libraries and Building Context --
 
 # Import Libraries
-from great_expectations.data_context import FileDataContext
+from great_expectations.data_context import get_context
+from great_expectations.core.batch import RuntimeBatchRequest
 
 
 # Building Context
-context = FileDataContext.create(project_root_dir='./')
+context = get_context(context_root_dir="./gx")
+
+# ================================================================================================================
+# File datasets (one for local testing or Airflow deployment)
+# If testing locally, make sure these paths are correct for your local files:
+transformed_path_crash_local = 'datasets/Clean_Crash_Data.csv'
+transformed_path_date_local = 'datasets/Clean_Crash_Date_Data.csv'
+transformed_path_road_local = 'datasets/Clean_Date_Data.csv'
+
+# If deploying to Airflow, use these paths (assuming files are at /opt/airflow/data/):
+transformed_path_crash_airflow  = '/opt/airflow/data/Clean_Crash_Data.csv'
+transformed_path_date_airflow  = '/opt/airflow/data/Clean_Crash_Date_Data.csv'
+transformed_path_road_airflow  = '/opt/airflow/data/Clean_Road_Data.csv'
+
+# Choose which paths to use:
+# For local testing:
+# current_crash_path = transformed_path_crash_local 
+# current_date_path = transformed_path_date_local 
+# current_road_path = transformed_path_road_local
+
+# For Airflow deployment:
+current_crash_path = transformed_path_crash_airflow
+current_date_path = transformed_path_date_airflow
+current_road_path = transformed_path_road_airflow
 
 # ================================================================================================================
 
-# -- Crash Table --
+batch_request_crash = RuntimeBatchRequest( 
+    datasource_name="dataset-table-Crash",
+    data_connector_name="default_runtime_data_connector_name", 
+    data_asset_name="crash-data",
+    runtime_parameters={"path": current_crash_path}, # Use the chosen path variable
+    batch_identifiers={"default_identifier_name": "crash_data_run"},
+    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
+)
 
-datasource_crash = 'dataset-table-Crash'
-crash_asset = 'crash-data'
-expectation_suite_crash_dataset = 'expectation-crash-dataset'
+batch_request_date = RuntimeBatchRequest( 
+    datasource_name="dataset-table-Date",
+    data_connector_name="default_runtime_data_connector_name",
+    data_asset_name="date-data",
+    runtime_parameters={"path": current_date_path}, # Use the chosen path variable
+    batch_identifiers={"default_identifier_name": "date_data_run"}, 
+    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
+)
 
-# ================================================================================================================
-
-# -- Date Table --
-datasource_date= 'dataset-table-Date'
-date_asset = 'date-data'
-expectation_suite_date_dataset = 'expectation-date-dataset'
-
-# ================================================================================================================
-
-# -- Road Table --
-datasource_road= 'dataset-table-Road-1'
-road_asset = 'date-data'
-expectation_suite_road_dataset = 'expectation-road-dataset'
-
-# ================================================================================================================
-# File datasets 
-transformed_path_crash = '/opt/airflow/data/Clean_Crash_Data.csv'
-transformed_path_date = '/opt/airflow/data/Clean_Crash_Date_Data.csv'
-transformed_path_road = '/opt/airflow/data/Clean_Road_Data.csv'
-
-# ================================================================================================================
-
-# -- Crash Table --
-
-# Configure datasources and assets for the validation run
-ds_crash = context.sources.add_pandas(datasource_crash)
-asset_crash = ds_crash.add_csv_asset(crash_asset, filepath_or_buffer=transformed_path_crash)
-batch_request_crash = asset_crash.build_batch_request()
-
-# -- Date Table --
-ds_date = context.sources.add_pandas(datasource_date)
-asset_date = ds_date.add_csv_asset(date_asset, filepath_or_buffer=transformed_path_date)
-batch_request_date = asset_date.build_batch_request()
-
-# -- Road Table --
-ds_road = context.sources.add_pandas(datasource_road)
-asset_road = ds_road.add_csv_asset(road_asset, filepath_or_buffer=transformed_path_road)
-batch_request_road = asset_road.build_batch_request()
-
+batch_request_road = RuntimeBatchRequest( 
+    datasource_name="dataset-table-Road-1",
+    data_connector_name="default_runtime_data_connector_name",
+    data_asset_name="road-data",
+    runtime_parameters={"path": current_road_path}, # Specify path here
+    batch_identifiers={"default_identifier_name": "road_data_run"}, 
+    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
+)
 
 # ================================================================================================================
 
@@ -64,39 +69,17 @@ checkpoint = context.add_or_update_checkpoint(
     validations=[
         {
             "batch_request" : batch_request_crash,
-            "expectation_suite_name" : expectation_suite_crash_dataset
+            "expectation_suite_name" : "expectation-crash-dataset"
         },
         {
             "batch_request" : batch_request_date,
-            "expectation_suite_name" : expectation_suite_date_dataset
+            "expectation_suite_name" : "expectation-date-dataset"
         },
         {
             "batch_request" : batch_request_road,
-            "expectation_suite_name" : expectation_suite_road_dataset
+            "expectation_suite_name" : "expectation-road-dataset"
         }
     ],
-    # Configure Data Docs to be built after the checkpoint run
-    action_list=[
-        {
-            "name": "run_callbacks",
-            "action": {
-                "class_name": "RunCallbacksAction",
-                "args": {"callbacks": []},
-            },
-        },
-        {
-            "name": "store_validation_result",
-            "action": {"class_name": "StoreValidationResultAction"},
-        },
-        {
-            "name": "store_evaluation_parameter_metrics",
-            "action": {"class_name": "StoreEvaluationParameterMetricsAction"},
-        },
-        {
-            "name": "update_data_docs",
-            "action": {"class_name": "UpdateDataDocsAction"},
-        },
-    ]
 )
 
 # Running Checkpoint
@@ -106,9 +89,11 @@ checkpoint_result = checkpoint.run()
 if not checkpoint_result["success"]:
     print("Data validation failed!")
     # Optional: Build Data Docs explicitly here if not done by action_list
+    context.build_data_docs()
     # context.build_data_docs() # This is now handled by UpdateDataDocsAction
     raise ValueError("Great Expectations data validation failed.")
 else:
     print("Data validation succeeded.")
+    context.build_data_docs()
     # Optional: Build Data Docs explicitly here if not done by action_list
    
