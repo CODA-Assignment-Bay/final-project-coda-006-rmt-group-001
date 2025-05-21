@@ -6,11 +6,11 @@ spark = SparkSession.builder \
     .config("spark.jars.packages", "org.postgresql:postgresql:42.6.0") \
     .getOrCreate()
 
-postgres_url = "jdbc:postgresql://ep-black-sun-a1uqdrq7-pooler.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require"
+postgres_url = "jdbc:postgresql://ep-tight-feather-a10zdamw-pooler.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require"
 
 postgres_properties = {
     "user": "neondb_owner",
-    "password": "npg_MP9sx2oAVjyf",
+    "password": "npg_u7OicJ5MYTaP",
     "driver": "org.postgresql.Driver"
 }
 
