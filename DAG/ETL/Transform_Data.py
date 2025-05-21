@@ -47,10 +47,10 @@ window = Window.orderBy("date")
 
 Final_Date_Data = generated_dates.select(
     col("crash_date").alias("date"),
-    year("crash_date").alias("crash_year"),
-    month("crash_date").alias("crash_month"),
-    dayofweek("crash_date").alias("crash_day_of_week")
-).withColumn("crash_week", ceil(dayofmonth("crash_date") / 7.0))
+    year("date").alias("crash_year"),
+    month("date").alias("crash_month"),
+    dayofweek("date").alias("crash_day_of_week")
+).withColumn("crash_week", ceil(dayofmonth("date") / 7.0))
 
 
 
