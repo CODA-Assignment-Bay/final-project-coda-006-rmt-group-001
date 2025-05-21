@@ -1,5 +1,5 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, year, month, to_timestamp, row_number, weekofyear, ceil, dayofmonth
+from pyspark.sql.functions import col, year, month, row_number, ceil, dayofmonth, sequence, explode, to_date, min, max, trunc, last_day, dayofweek
 from pyspark.sql.window import Window
 import os
 import shutil
@@ -15,21 +15,6 @@ path_data = "/opt/airflow/data/traffic_accidents.csv"
 
 raw_data = spark.read.csv(path_data, header=True, inferSchema=True)
 
-raw_data = raw_data.withColumn("crash_date", to_timestamp("crash_date", "MM/dd/yyyy hh:mm:ss a"))
-
-window = Window.orderBy("crash_date", "crash_hour")
-
-Date_Data = raw_data.select(
-    col("crash_date"),
-    year("crash_date").alias("crash_year"),
-    month("crash_date").alias("crash_month"),
-    col("crash_day_of_week").alias("crash_day"),
-    col("crash_hour")
-).withColumn("id", row_number().over(window)) \
- .withColumn("crash_week", ceil(dayofmonth("crash_date") / 7.0))
-
-Clean_Date_Data = Date_Data.dropDuplicates(["crash_date", "crash_year", "crash_month", "crash_day", "crash_hour", "crash_week"])
-
 window = Window.orderBy("trafficway_type", "alignment", "roadway_surface_condition", "road_defect")
 
 Roadway_Data = raw_data.select(col("trafficway_type"), col("alignment"), col("roadway_surface_cond").alias("roadway_surface_condition"), 
@@ -37,20 +22,44 @@ Roadway_Data = raw_data.select(col("trafficway_type"), col("alignment"), col("ro
 
 Clean_Roadway_Data = Roadway_Data.dropDuplicates(["trafficway_type", "alignment", "roadway_surface_condition",  "road_defect"])
 
-window = Window.orderBy("crash_date", "crash_hour")
-Final_Date_Data = Clean_Date_Data.select(col("crash_date"), col("crash_year"), col("crash_month"),
-                                        col("crash_week"),col("crash_day"), col("crash_hour"), ).withColumn("id", row_number().over(window))
-
 window = Window.orderBy("trafficway_type", "alignment", "roadway_surface_condition", "road_defect")
 
 Final_Roadway_Data = Clean_Roadway_Data.select(col("trafficway_type"), ("alignment"), ("roadway_surface_condition"),
                                         ("road_defect")).withColumn("id", row_number().over(window))
 
-Join_Final_Date_Data = Final_Date_Data.withColumnRenamed("id", "date_id")
+raw_data = raw_data.withColumn("crash_date", to_date("crash_date", "MM/dd/yyyy hh:mm:ss a"))
+
+datas_date = raw_data.select(
+    min("crash_date").alias("min_date"),
+    max("crash_date").alias("max_date")
+)
+
+date_range = datas_date.select(
+    trunc("min_date", "MM").alias("start_of_min_month"),
+    last_day("max_date").alias("end_of_max_month")
+)
+
+generated_dates= date_range.select(
+    explode(sequence(to_date(col("start_of_min_month")), to_date(col("end_of_max_month")))).alias("crash_date")
+)
+
+window = Window.orderBy("crash_date")
+
+Final_Date_Data = generated_dates.select(
+    col("crash_date"),
+    year("crash_date").alias("crash_year"),
+    month("crash_date").alias("crash_month"),
+    dayofweek("crash_date").alias("crash_day_of_week")
+).withColumn("crash_week", ceil(dayofmonth("crash_date") / 7.0))
+
+
+
 Join_Final_Roadway_Data = Final_Roadway_Data.withColumnRenamed("id", "road_id")
 
-Date_Temp = raw_data.join(Join_Final_Date_Data, (raw_data["crash_date"] == Join_Final_Date_Data["crash_date"]) & 
-                                                 (raw_data["crash_hour"] == Join_Final_Date_Data["crash_hour"]), "inner")
+raw_data_alias = raw_data.alias("a")
+final_date_alias = Final_Date_Data.alias("b")
+
+Date_Temp = raw_data_alias.join(final_date_alias, raw_data_alias["crash_date"] == final_date_alias["crash_date"])
 
 Crash_Temp = Date_Temp.join(Join_Final_Roadway_Data, (Date_Temp["trafficway_type"] == Join_Final_Roadway_Data["trafficway_type"])
                              & (Date_Temp["alignment"] == Join_Final_Roadway_Data["alignment"])
@@ -58,11 +67,11 @@ Crash_Temp = Date_Temp.join(Join_Final_Roadway_Data, (Date_Temp["trafficway_type
                              & (Date_Temp["road_defect"] == Join_Final_Roadway_Data["road_defect"])
                              , "inner")
 
-
-Crash_Data = Crash_Temp.select("date_id", "road_id", "traffic_control_device", "weather_condition", "lighting_condition",
+Crash_Data = Crash_Temp.select(raw_data_alias["crash_date"], "road_id", "crash_hour", "traffic_control_device", "weather_condition", "lighting_condition",
                                    "first_crash_type", "crash_type", "intersection_related_i", "damage", "prim_contributory_cause",
                                    "num_units", "most_severe_injury", "injuries_total", "injuries_fatal", "injuries_incapacitating",
                                    "injuries_non_incapacitating", "injuries_reported_not_evident", "injuries_no_indication")
+
 
 tmp_path = os.path.join("/opt/airflow/data", "_tmp_output")
 
@@ -82,8 +91,7 @@ shutil.rmtree(tmp_path)
 
 print(f"Saved: {final_output_path}")
 
-Final_Date_Data = Final_Date_Data.drop("id")
-Final_Date_Data = Final_Date_Data.orderBy("crash_date", "crash_hour")
+Final_Date_Data = Final_Date_Data.orderBy("crash_date")
 
 tmp_path = os.path.join("/opt/airflow/data", "_tmp_output")
 
