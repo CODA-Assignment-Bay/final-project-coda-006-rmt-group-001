@@ -1,71 +1,28 @@
-# -- Import Libraries and Building Context --
+import great_expectations as gx
 
-# Import Libraries
-from great_expectations.data_context import get_context
-from great_expectations.core.batch import RuntimeBatchRequest
+context = gx.get_context(context_root_dir='./gx')
 
+# -- Crash Table --
 
-# Building Context
-context = get_context(context_root_dir="./gx")
-
-# ================================================================================================================
-# File datasets (one for local testing or Airflow deployment)
-# If testing locally, make sure these paths are correct for your local files:
-transformed_path_crash_local = 'datasets/Clean_Crash_Data.csv'
-transformed_path_date_local = 'datasets/Clean_Crash_Date_Data.csv'
-transformed_path_road_local = 'datasets/Clean_Date_Data.csv'
-
-# If deploying to Airflow, use these paths (assuming files are at /opt/airflow/data/):
-transformed_path_crash_airflow  = '/opt/airflow/data/Clean_Crash_Data.csv'
-transformed_path_date_airflow  = '/opt/airflow/data/Clean_Crash_Date_Data.csv'
-transformed_path_road_airflow  = '/opt/airflow/data/Clean_Road_Data.csv'
-
-# Choose which paths to use:
-# For local testing:
-# current_crash_path = transformed_path_crash_local 
-# current_date_path = transformed_path_date_local 
-# current_road_path = transformed_path_road_local
-
-# For Airflow deployment:
-current_crash_path = transformed_path_crash_airflow
-current_date_path = transformed_path_date_airflow
-current_road_path = transformed_path_road_airflow
-
-# ================================================================================================================
-
-batch_request_crash = RuntimeBatchRequest( 
-    datasource_name="dataset-table-Crash",
-    data_connector_name="default_runtime_data_connector_name", 
-    data_asset_name="crash-data",
-    runtime_parameters={"path": current_crash_path}, # Use the chosen path variable
-    batch_identifiers={"default_identifier_name": "crash_data_run"},
-    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
-)
-
-batch_request_date = RuntimeBatchRequest( 
-    datasource_name="dataset-table-Date",
-    data_connector_name="default_runtime_data_connector_name",
-    data_asset_name="date-data",
-    runtime_parameters={"path": current_date_path}, # Use the chosen path variable
-    batch_identifiers={"default_identifier_name": "date_data_run"}, 
-    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
-)
-
-batch_request_road = RuntimeBatchRequest( 
-    datasource_name="dataset-table-Road-1",
-    data_connector_name="default_runtime_data_connector_name",
-    data_asset_name="road-data",
-    runtime_parameters={"path": current_road_path}, # Specify path here
-    batch_identifiers={"default_identifier_name": "road_data_run"}, 
-    batch_spec_passthrough={"reader_method": "csv"}, # This is how to read the file
-)
-
-# ================================================================================================================
+ds_crash = context.get_datasource('dataset-table-Crash')
+asset_crash = ds_crash.get_asset('crash-data')
+batch_request_crash = asset_crash.build_batch_request()
 
 
-# Create Checkpoint
-checkpoint = context.add_or_update_checkpoint(
+# -- Date Table --
+ds_date = context.get_datasource('dataset-table-Date')
+asset_date = ds_date.get_asset('date-data')
+batch_request_date = asset_date.build_batch_request()
+
+
+# -- Road Table --
+ds_road = context.get_datasource('dataset-table-Road-1')
+asset_road = ds_road.get_asset('road-data')
+batch_request_road = asset_road.build_batch_request()
+
+checkpoint_etl = context.add_or_update_checkpoint(
     name="multidata_validation_checkpoint",
+    run_name_template="multidata_validation_checkpoint-%Y%m%d-%H%M%S",
     validations=[
         {
             "batch_request" : batch_request_crash,
@@ -83,7 +40,7 @@ checkpoint = context.add_or_update_checkpoint(
 )
 
 # Running Checkpoint
-checkpoint_result = checkpoint.run()
+checkpoint_result = checkpoint_etl.run()
 
 # Check validation results
 if not checkpoint_result["success"]:
@@ -96,4 +53,3 @@ else:
     print("Data validation succeeded.")
     context.build_data_docs()
     # Optional: Build Data Docs explicitly here if not done by action_list
-   

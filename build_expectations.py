@@ -18,7 +18,8 @@ ds_crash = context.sources.add_pandas(datasource_crash)
 
 # Give a name to a data asset
 crash_asset = 'crash-data'
-path_to_data_crash = 'datasets/Clean_Crash_Data.csv'
+path_to_data_crash = 'datasets/Clean_Crash_Data.csv' # <= This is for local testing
+# path_to_data_crash = '/opt/airflow/data/Clean_Crash_Data.csv' # <= This is for accessing files on airflow
 asset_crash = ds_crash.add_csv_asset(crash_asset, filepath_or_buffer=path_to_data_crash)
 
 # Build batch request
@@ -59,7 +60,8 @@ ds_date = context.sources.add_pandas(datasource_date)
 
 # Give a name to a data asset
 date_asset = 'date-data'
-path_to_data_date = 'datasets/Clean_Crash_Date_Data.csv'
+path_to_data_date = 'datasets/Clean_Crash_Date_Data.csv' # <= This is for local testing
+# path_to_data_date = '/opt/airflow/data/Clean_Crash_Date_Data.csv' # <= This is for accessing files on airflow
 asset_date = ds_date.add_csv_asset(date_asset, filepath_or_buffer=path_to_data_date)
 
 # Build batch request
@@ -120,8 +122,9 @@ datasource_road= 'dataset-table-Road-1'
 ds_road = context.sources.add_pandas(datasource_road)
 
 # Give a name to a data asset
-road_asset = 'date-data'
-path_to_data_road = 'datasets/Clean_Road_Data.csv'
+road_asset = 'road-data'
+path_to_data_road = 'datasets/Clean_Road_Data.csv' # <= This is for local testing
+# path_to_data_road = '/opt/airflow/data/Clean_Road_Data.csv' # <= This is for accessing files on airflow
 asset_road = ds_road.add_csv_asset(road_asset, filepath_or_buffer=path_to_data_road)
 
 # Build batch request
@@ -161,7 +164,8 @@ ds_crash_factor = context.sources.add_pandas(datasource_crash_factor)
 
 # Give a name to a data asset
 crash_factor_asset = 'crash_factor-data'
-path_to_data_crash_factor = 'datasets/crash_factors.csv'
+path_to_data_crash_factor = 'datasets/crash_factors.csv' # <= This is for local testing
+# path_to_data_crash_factor = '/opt/airflow/data/dashboard2.csv' # <= This is for accessing files on airflow
 asset_crash_factor = ds_crash_factor.add_csv_asset(crash_factor_asset, filepath_or_buffer=path_to_data_crash_factor)
 
 # Build batch request
@@ -203,7 +207,8 @@ ds_crash_time = context.sources.add_pandas(datasource_crash_time)
 
 # Give a name to a data asset
 crash_time_asset = 'crash_time-data'
-path_to_data_crash_time = 'datasets/crash_time.csv'
+path_to_data_crash_time = 'datasets/crash_time.csv' # <= This is for local testing
+# path_to_data_crash_time = '/opt/airflow/data/dashboard1.csv' # <= This is for accessing files on airflow
 asset_crash_time = ds_crash_time.add_csv_asset(crash_time_asset, filepath_or_buffer= path_to_data_crash_time)
 
 # Build batch request
