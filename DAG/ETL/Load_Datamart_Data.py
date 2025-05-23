@@ -1,4 +1,5 @@
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import to_date
 import os
 import shutil
 
@@ -17,7 +18,7 @@ postgres_properties = {
 }
 
 dashboard1_Data = spark.read.csv("/opt/airflow/data/dashboard1.csv", header=True, inferSchema=True)
-
+dashboard1_Data = dashboard1_Data.withColumn("crash_date", to_date("crash_date", "yyyy-MM-dd"))
 dashboard2_Data = spark.read.csv("/opt/airflow/data/dashboard2.csv", header=True, inferSchema=True)
 
 table_name = "crash_time"

@@ -49,7 +49,6 @@ dashboard2 = c.join(r, c["road_id"] == r["id"], "inner") \
         sum("injuries_no_indication").alias("total_injuries_no_indication")
     )
 
-
 table_name = "dashboard1"
 
 output_dir = f"/opt/airflow/data/tmp_{table_name}_csv"

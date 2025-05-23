@@ -47,12 +47,13 @@ window = Window.orderBy("date")
 
 Final_Date_Data = generated_dates.select(
     col("crash_date").alias("date"),
-    year("date").alias("crash_year"),
-    month("date").alias("crash_month"),
-    dayofweek("date").alias("crash_day_of_week")
-).withColumn("crash_week", ceil(dayofmonth("date") / 7.0))
+    year("crash_date").alias("year"),
+    month("crash_date").alias("month"),
+    dayofweek("crash_date").alias("day_of_week")
+).withColumn("week", ceil(dayofmonth("date") / 7.0))
 
 
+Join_Final_Roadway_Data = Final_Roadway_Data.withColumnRenamed("id", "road_id")
 
 Join_Final_Roadway_Data = Final_Roadway_Data.withColumnRenamed("id", "road_id")
 
@@ -67,6 +68,7 @@ Crash_Temp = Date_Temp.join(Join_Final_Roadway_Data, (Date_Temp["trafficway_type
                              & (Date_Temp["road_defect"] == Join_Final_Roadway_Data["road_defect"])
                              , "inner")
 
+# select the columns from User_Final DataFrame to create a new DataFrame with the same schema as User_data and add the new columns Country_ID, State_ID, and City_ID
 Crash_Data = Crash_Temp.select(raw_data_alias["crash_date"], "road_id", "crash_hour", "traffic_control_device", "weather_condition", "lighting_condition",
                                    "first_crash_type", "crash_type", "intersection_related_i", "damage", "prim_contributory_cause",
                                    "num_units", "most_severe_injury", "injuries_total", "injuries_fatal", "injuries_incapacitating",

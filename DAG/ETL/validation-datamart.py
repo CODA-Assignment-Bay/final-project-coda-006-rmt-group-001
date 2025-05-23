@@ -1,6 +1,6 @@
 import great_expectations as gx
 
-context = gx.get_context(context_root_dir='./gx')
+context = gx.get_context(context_root_dir='/opt/airflow/data/gx')
 
 # -- Crash Factor Table --
 ds_crash_factor = context.get_datasource('dataset-crash_factor')
