@@ -1,0 +1,252 @@
+[2025-05-22T15:22:51.982+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:22:51.993+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:22:51.994+0000] {taskinstance.py:1361} INFO - Starting attempt 2 of 3
+[2025-05-22T15:22:52.010+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Load_Data> on 2025-05-22 15:17:26.089500+00:00
+[2025-05-22T15:22:52.016+0000] {standard_task_runner.py:57} INFO - Started process 1363 to run task
+[2025-05-22T15:22:52.019+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Load_Data', 'manual__2025-05-22T15:17:26.089500+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpavq_fmt_']
+[2025-05-22T15:22:52.023+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask Load_Data
+[2025-05-22T15:22:52.108+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [running]> on host 68da71f009b0
+[2025-05-22T15:22:52.215+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Load_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:17:26.089500+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-22T15:17:26.089500+00:00'
+[2025-05-22T15:22:52.216+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T15:22:52.217+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Load_Data.py']
+[2025-05-22T15:22:52.232+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T15:22:53.966+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T15:22:53.967+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T15:22:53.967+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T15:22:53.968+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T15:22:53.969+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T15:22:54.163+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T15:22:54.249+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T15:22:54.250+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T15:22:54.253+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T15:22:54.254+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-15366f7b-8757-4aa1-b677-6fba222b6e5e;1.0
+[2025-05-22T15:22:54.255+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T15:22:54.354+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T15:22:54.380+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T15:22:54.395+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 135ms :: artifacts dl 5ms
+[2025-05-22T15:22:54.395+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-05-22T15:22:54.396+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T15:22:54.397+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T15:22:54.397+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:22:54.398+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T15:22:54.398+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T15:22:54.399+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:22:54.399+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T15:22:54.400+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:22:54.400+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-15366f7b-8757-4aa1-b677-6fba222b6e5e
+[2025-05-22T15:22:54.401+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T15:22:54.403+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/4ms)
+[2025-05-22T15:22:54.606+0000] {subprocess.py:93} INFO - 25/05/22 15:22:54 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T15:22:54.878+0000] {subprocess.py:93} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T15:22:54.879+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-05-22T15:22:54.879+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T15:23:04.859+0000] {subprocess.py:93} INFO - [Stage 5:=====>                                                    (1 + 9) / 10]                                                                                [Stage 6:>                                                          (0 + 1) / 1]25/05/22 15:23:04 ERROR Executor: Exception in task 0.0 in stage 6.0 (TID 15)
+[2025-05-22T15:23:04.861+0000] {subprocess.py:93} INFO - java.sql.BatchUpdateException: Batch entry 0 INSERT INTO date ("date","year","month","day_of_week","week") VALUES ('2013-03-01',2013,3,6,1) was aborted: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:04.862+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:04.863+0000] {subprocess.py:93} INFO -   Position: 71  Call getNextException to see other errors in the batch.
+[2025-05-22T15:23:04.864+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-22T15:23:04.866+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+[2025-05-22T15:23:04.868+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-22T15:23:04.870+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-22T15:23:04.871+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-22T15:23:04.871+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-22T15:23:04.872+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-22T15:23:04.872+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-22T15:23:04.873+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-22T15:23:04.874+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-22T15:23:04.875+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-22T15:23:04.877+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-22T15:23:04.877+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-22T15:23:04.878+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-22T15:23:04.878+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-22T15:23:04.879+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-22T15:23:04.879+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-22T15:23:04.880+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T15:23:04.881+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:04.882+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:04.883+0000] {subprocess.py:93} INFO -   Position: 71
+[2025-05-22T15:23:04.883+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-22T15:23:04.884+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-22T15:23:04.884+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+[2025-05-22T15:23:04.885+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+[2025-05-22T15:23:04.886+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+[2025-05-22T15:23:04.886+0000] {subprocess.py:93} INFO - 	... 16 more
+[2025-05-22T15:23:04.910+0000] {subprocess.py:93} INFO - 25/05/22 15:23:04 WARN TaskSetManager: Lost task 0.0 in stage 6.0 (TID 15) (68da71f009b0 executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO date ("date","year","month","day_of_week","week") VALUES ('2013-03-01',2013,3,6,1) was aborted: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:04.911+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:04.911+0000] {subprocess.py:93} INFO -   Position: 71  Call getNextException to see other errors in the batch.
+[2025-05-22T15:23:04.912+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-22T15:23:04.913+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+[2025-05-22T15:23:04.913+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-22T15:23:04.914+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-22T15:23:04.915+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-22T15:23:04.917+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-22T15:23:04.918+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-22T15:23:04.919+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-22T15:23:04.919+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-22T15:23:04.920+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-22T15:23:04.921+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-22T15:23:04.922+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-22T15:23:04.922+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-22T15:23:04.923+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-22T15:23:04.924+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-22T15:23:04.924+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-22T15:23:04.925+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-22T15:23:04.926+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T15:23:04.927+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:04.928+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:04.928+0000] {subprocess.py:93} INFO -   Position: 71
+[2025-05-22T15:23:04.929+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-22T15:23:04.930+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-22T15:23:04.930+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+[2025-05-22T15:23:04.931+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+[2025-05-22T15:23:04.932+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+[2025-05-22T15:23:04.932+0000] {subprocess.py:93} INFO - 	... 16 more
+[2025-05-22T15:23:04.933+0000] {subprocess.py:93} INFO - 
+[2025-05-22T15:23:04.934+0000] {subprocess.py:93} INFO - 25/05/22 15:23:04 ERROR TaskSetManager: Task 0 in stage 6.0 failed 1 times; aborting job
+[2025-05-22T15:23:05.016+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-22T15:23:05.017+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/Load_Data.py", line 21, in <module>
+[2025-05-22T15:23:05.022+0000] {subprocess.py:93} INFO -     data_date.write.jdbc(url=postgres_url, table="date", mode="append", properties=postgres_properties)
+[2025-05-22T15:23:05.023+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/readwriter.py", line 1445, in jdbc
+[2025-05-22T15:23:05.023+0000] {subprocess.py:93} INFO -     self.mode(mode)._jwrite.jdbc(url, table, jprop)
+[2025-05-22T15:23:05.025+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1304, in __call__
+[2025-05-22T15:23:05.026+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2025-05-22T15:23:05.028+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2025-05-22T15:23:05.029+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/utils.py", line 111, in deco
+[2025-05-22T15:23:05.029+0000] {subprocess.py:93} INFO -     return f(*a, **kw)
+[2025-05-22T15:23:05.030+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2025-05-22T15:23:05.031+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/py4j/protocol.py", line 326, in get_return_value
+[2025-05-22T15:23:05.032+0000] {subprocess.py:93} INFO -     raise Py4JJavaError(
+[2025-05-22T15:23:05.068+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o53.jdbc.
+[2025-05-22T15:23:05.069+0000] {subprocess.py:93} INFO - : org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 6.0 failed 1 times, most recent failure: Lost task 0.0 in stage 6.0 (TID 15) (68da71f009b0 executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO date ("date","year","month","day_of_week","week") VALUES ('2013-03-01',2013,3,6,1) was aborted: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:05.071+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:05.072+0000] {subprocess.py:93} INFO -   Position: 71  Call getNextException to see other errors in the batch.
+[2025-05-22T15:23:05.073+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-22T15:23:05.073+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+[2025-05-22T15:23:05.074+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-22T15:23:05.074+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-22T15:23:05.075+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-22T15:23:05.077+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-22T15:23:05.078+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-22T15:23:05.079+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-22T15:23:05.080+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-22T15:23:05.081+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-22T15:23:05.081+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-22T15:23:05.082+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-22T15:23:05.082+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-22T15:23:05.083+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-22T15:23:05.084+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-22T15:23:05.084+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-22T15:23:05.085+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-22T15:23:05.086+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T15:23:05.086+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:05.087+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:05.088+0000] {subprocess.py:93} INFO -   Position: 71
+[2025-05-22T15:23:05.089+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-22T15:23:05.090+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-22T15:23:05.091+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+[2025-05-22T15:23:05.092+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+[2025-05-22T15:23:05.093+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+[2025-05-22T15:23:05.093+0000] {subprocess.py:93} INFO - 	... 16 more
+[2025-05-22T15:23:05.094+0000] {subprocess.py:93} INFO - 
+[2025-05-22T15:23:05.095+0000] {subprocess.py:93} INFO - Driver stacktrace:
+[2025-05-22T15:23:05.096+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+[2025-05-22T15:23:05.096+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+[2025-05-22T15:23:05.097+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+[2025-05-22T15:23:05.098+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2025-05-22T15:23:05.099+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2025-05-22T15:23:05.099+0000] {subprocess.py:93} INFO - 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2025-05-22T15:23:05.100+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+[2025-05-22T15:23:05.100+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+[2025-05-22T15:23:05.101+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+[2025-05-22T15:23:05.101+0000] {subprocess.py:93} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2025-05-22T15:23:05.102+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+[2025-05-22T15:23:05.103+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+[2025-05-22T15:23:05.103+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+[2025-05-22T15:23:05.104+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+[2025-05-22T15:23:05.105+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+[2025-05-22T15:23:05.105+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+[2025-05-22T15:23:05.106+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+[2025-05-22T15:23:05.108+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+[2025-05-22T15:23:05.109+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+[2025-05-22T15:23:05.110+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+[2025-05-22T15:23:05.111+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1020)
+[2025-05-22T15:23:05.112+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-22T15:23:05.112+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+[2025-05-22T15:23:05.113+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+[2025-05-22T15:23:05.114+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1018)
+[2025-05-22T15:23:05.115+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:854)
+[2025-05-22T15:23:05.115+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:68)
+[2025-05-22T15:23:05.116+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:46)
+[2025-05-22T15:23:05.116+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+[2025-05-22T15:23:05.117+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+[2025-05-22T15:23:05.117+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:90)
+[2025-05-22T15:23:05.118+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+[2025-05-22T15:23:05.118+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+[2025-05-22T15:23:05.119+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-22T15:23:05.120+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+[2025-05-22T15:23:05.121+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+[2025-05-22T15:23:05.121+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+[2025-05-22T15:23:05.122+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+[2025-05-22T15:23:05.123+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+[2025-05-22T15:23:05.124+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2025-05-22T15:23:05.125+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2025-05-22T15:23:05.126+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2025-05-22T15:23:05.126+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2025-05-22T15:23:05.127+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-05-22T15:23:05.128+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+[2025-05-22T15:23:05.128+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+[2025-05-22T15:23:05.129+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+[2025-05-22T15:23:05.129+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:301)
+[2025-05-22T15:23:05.130+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:817)
+[2025-05-22T15:23:05.130+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-05-22T15:23:05.131+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-05-22T15:23:05.131+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-05-22T15:23:05.131+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-05-22T15:23:05.132+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-05-22T15:23:05.132+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-05-22T15:23:05.132+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2025-05-22T15:23:05.133+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-05-22T15:23:05.133+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-05-22T15:23:05.133+0000] {subprocess.py:93} INFO - 	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-05-22T15:23:05.134+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T15:23:05.135+0000] {subprocess.py:93} INFO - Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO date ("date","year","month","day_of_week","week") VALUES ('2013-03-01',2013,3,6,1) was aborted: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:05.135+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:05.136+0000] {subprocess.py:93} INFO -   Position: 71  Call getNextException to see other errors in the batch.
+[2025-05-22T15:23:05.136+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-22T15:23:05.137+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:880)
+[2025-05-22T15:23:05.137+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-22T15:23:05.137+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-22T15:23:05.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-22T15:23:05.138+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-22T15:23:05.139+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-22T15:23:05.140+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-22T15:23:05.140+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-22T15:23:05.141+0000] {subprocess.py:93} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-22T15:23:05.141+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-22T15:23:05.141+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-22T15:23:05.142+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-22T15:23:05.143+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-22T15:23:05.143+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-22T15:23:05.144+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-22T15:23:05.145+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-22T15:23:05.146+0000] {subprocess.py:93} INFO - 	... 1 more
+[2025-05-22T15:23:05.146+0000] {subprocess.py:93} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: column "date" is of type date but expression is of type character varying
+[2025-05-22T15:23:05.147+0000] {subprocess.py:93} INFO -   Hint: You will need to rewrite or cast the expression.
+[2025-05-22T15:23:05.147+0000] {subprocess.py:93} INFO -   Position: 71
+[2025-05-22T15:23:05.148+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-22T15:23:05.148+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-22T15:23:05.149+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368)
+[2025-05-22T15:23:05.149+0000] {subprocess.py:93} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:327)
+[2025-05-22T15:23:05.149+0000] {subprocess.py:93} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:877)
+[2025-05-22T15:23:05.150+0000] {subprocess.py:93} INFO - 	... 16 more
+[2025-05-22T15:23:05.150+0000] {subprocess.py:93} INFO - 
+[2025-05-22T15:23:05.545+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-22T15:23:05.565+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T15:23:05.570+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Load_Data, execution_date=20250522T151726, start_date=20250522T152251, end_date=20250522T152305
+[2025-05-22T15:23:05.594+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 8 for task Load_Data (Bash command failed. The command returned a non-zero exit code 1.; 1363)
+[2025-05-22T15:23:05.616+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-22T15:23:05.644+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

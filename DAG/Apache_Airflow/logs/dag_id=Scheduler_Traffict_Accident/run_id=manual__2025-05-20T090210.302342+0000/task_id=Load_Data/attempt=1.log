@@ -1,0 +1,273 @@
+[2025-05-20T09:02:52.545+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-20T09:02:10.302342+00:00 [queued]>
+[2025-05-20T09:02:52.557+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-20T09:02:10.302342+00:00 [queued]>
+[2025-05-20T09:02:52.558+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-20T09:02:52.559+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-05-20T09:02:52.561+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-20T09:02:52.580+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Load_Data> on 2025-05-20 09:02:10.302342+00:00
+[2025-05-20T09:02:52.587+0000] {standard_task_runner.py:52} INFO - Started process 1053 to run task
+[2025-05-20T09:02:52.592+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Load_Data', 'manual__2025-05-20T09:02:10.302342+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmp1uaq1e_v', '--error-file', '/tmp/tmpnmvi6q74']
+[2025-05-20T09:02:52.594+0000] {standard_task_runner.py:80} INFO - Job 5: Subtask Load_Data
+[2025-05-20T09:02:52.666+0000] {task_command.py:371} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-20T09:02:10.302342+00:00 [running]> on host 6c958a96284c
+[2025-05-20T09:02:52.757+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Scheduler_Traffict_Accident
+AIRFLOW_CTX_TASK_ID=Load_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-20T09:02:10.302342+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-20T09:02:10.302342+00:00
+[2025-05-20T09:02:52.759+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-20T09:02:52.761+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Load_Data.py']
+[2025-05-20T09:02:52.772+0000] {subprocess.py:85} INFO - Output:
+[2025-05-20T09:02:54.493+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-20T09:02:54.494+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-20T09:02:54.495+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-20T09:02:54.495+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-20T09:02:54.496+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-20T09:02:54.661+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-20T09:02:54.770+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-20T09:02:54.771+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-20T09:02:54.775+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-20T09:02:54.776+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-f11707a8-a952-4b33-9c87-60fbc9fbf22d;1.0
+[2025-05-20T09:02:54.777+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-20T09:02:54.924+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-20T09:02:54.945+0000] {subprocess.py:92} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-20T09:02:54.960+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 178ms :: artifacts dl 6ms
+[2025-05-20T09:02:54.961+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-20T09:02:54.961+0000] {subprocess.py:92} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-20T09:02:54.962+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-20T09:02:54.962+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-20T09:02:54.963+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-20T09:02:54.964+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-20T09:02:54.964+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-20T09:02:54.965+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-20T09:02:54.965+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-20T09:02:54.966+0000] {subprocess.py:92} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-f11707a8-a952-4b33-9c87-60fbc9fbf22d
+[2025-05-20T09:02:54.967+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-20T09:02:54.969+0000] {subprocess.py:92} INFO - 	0 artifacts copied, 2 already retrieved (0kB/5ms)
+[2025-05-20T09:02:55.155+0000] {subprocess.py:92} INFO - 25/05/20 09:02:55 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-20T09:02:55.413+0000] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-20T09:02:55.414+0000] {subprocess.py:92} INFO - Setting default log level to "WARN".
+[2025-05-20T09:02:55.414+0000] {subprocess.py:92} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-20T09:03:30.151+0000] {subprocess.py:92} INFO - [Stage 1:>                                                          (0 + 2) / 2]                                                                                [Stage 6:>                                                          (0 + 2) / 2][Stage 6:=============================>                             (1 + 1) / 2]                                                                                [Stage 7:>                                                          (0 + 1) / 1]                                                                                [Stage 8:>                                                          (0 + 9) / 9]25/05/20 09:03:30 ERROR Executor: Exception in task 5.0 in stage 8.0 (TID 23)
+[2025-05-20T09:03:30.153+0000] {subprocess.py:92} INFO - java.sql.BatchUpdateException: Batch entry 0 INSERT INTO crash ("date_id","road_id","traffic_control_device","weather_condition","lighting_condition","first_crash_type","crash_type","intersection_related_i","damage","prim_contributory_cause","num_units","most_severe_injury","injuries_total","injuries_fatal","injuries_incapacitating","injuries_non_incapacitating","injuries_reported_not_evident","injuries_no_indication") VALUES (186200,436,'NO CONTROLS','CLEAR','DAYLIGHT','PEDALCYCLIST','INJURY AND / OR TOW DUE TO CRASH','Y','OVER $1,500','UNABLE TO DETERMINE',2,'NONINCAPACITATING INJURY',1.0,0.0,0.0,1.0,0.0,1.0) was aborted: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.154+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".  Call getNextException to see other errors in the batch.
+[2025-05-20T09:03:30.154+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-20T09:03:30.155+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2025-05-20T09:03:30.156+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2025-05-20T09:03:30.157+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2025-05-20T09:03:30.158+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2025-05-20T09:03:30.159+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2025-05-20T09:03:30.160+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2025-05-20T09:03:30.161+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-20T09:03:30.161+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-20T09:03:30.162+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-20T09:03:30.163+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-20T09:03:30.164+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-20T09:03:30.164+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-20T09:03:30.165+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-20T09:03:30.166+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-20T09:03:30.166+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-20T09:03:30.167+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-20T09:03:30.168+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-20T09:03:30.168+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-20T09:03:30.169+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-20T09:03:30.169+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-20T09:03:30.170+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-20T09:03:30.170+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-20T09:03:30.171+0000] {subprocess.py:92} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.172+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".
+[2025-05-20T09:03:30.173+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-20T09:03:30.174+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-20T09:03:30.174+0000] {subprocess.py:92} INFO - 	... 21 more
+[2025-05-20T09:03:30.207+0000] {subprocess.py:92} INFO - 25/05/20 09:03:30 WARN TaskSetManager: Lost task 5.0 in stage 8.0 (TID 23) (6c958a96284c executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO crash ("date_id","road_id","traffic_control_device","weather_condition","lighting_condition","first_crash_type","crash_type","intersection_related_i","damage","prim_contributory_cause","num_units","most_severe_injury","injuries_total","injuries_fatal","injuries_incapacitating","injuries_non_incapacitating","injuries_reported_not_evident","injuries_no_indication") VALUES (186200,436,'NO CONTROLS','CLEAR','DAYLIGHT','PEDALCYCLIST','INJURY AND / OR TOW DUE TO CRASH','Y','OVER $1,500','UNABLE TO DETERMINE',2,'NONINCAPACITATING INJURY',1.0,0.0,0.0,1.0,0.0,1.0) was aborted: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.209+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".  Call getNextException to see other errors in the batch.
+[2025-05-20T09:03:30.210+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-20T09:03:30.211+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2025-05-20T09:03:30.212+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2025-05-20T09:03:30.213+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2025-05-20T09:03:30.215+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2025-05-20T09:03:30.215+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2025-05-20T09:03:30.216+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2025-05-20T09:03:30.217+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-20T09:03:30.218+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-20T09:03:30.219+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-20T09:03:30.220+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-20T09:03:30.221+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-20T09:03:30.222+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-20T09:03:30.223+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-20T09:03:30.223+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-20T09:03:30.224+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-20T09:03:30.225+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-20T09:03:30.226+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-20T09:03:30.226+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-20T09:03:30.227+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-20T09:03:30.227+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-20T09:03:30.228+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-20T09:03:30.229+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-20T09:03:30.230+0000] {subprocess.py:92} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.230+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".
+[2025-05-20T09:03:30.231+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-20T09:03:30.232+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-20T09:03:30.232+0000] {subprocess.py:92} INFO - 	... 21 more
+[2025-05-20T09:03:30.233+0000] {subprocess.py:92} INFO - 
+[2025-05-20T09:03:30.234+0000] {subprocess.py:92} INFO - 25/05/20 09:03:30 ERROR TaskSetManager: Task 5 in stage 8.0 failed 1 times; aborting job
+[2025-05-20T09:03:30.370+0000] {subprocess.py:92} INFO - [Stage 8:>                                                          (0 + 8) / 9]Traceback (most recent call last):
+[2025-05-20T09:03:30.372+0000] {subprocess.py:92} INFO -   File "/opt/***/scripts/Load_Data.py", line 23, in <module>
+[2025-05-20T09:03:30.373+0000] {subprocess.py:92} INFO -     data_crash.write.jdbc(url=postgres_url, table="crash", mode="append", properties=postgres_properties)
+[2025-05-20T09:03:30.374+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 1445, in jdbc
+[2025-05-20T09:03:30.375+0000] {subprocess.py:92} INFO -     self.mode(mode)._jwrite.jdbc(url, table, jprop)
+[2025-05-20T09:03:30.376+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1305, in __call__
+[2025-05-20T09:03:30.377+0000] {subprocess.py:92} INFO -     answer, self.gateway_client, self.target_id, self.name)
+[2025-05-20T09:03:30.377+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/utils.py", line 111, in deco
+[2025-05-20T09:03:30.380+0000] {subprocess.py:92} INFO -     return f(*a, **kw)
+[2025-05-20T09:03:30.381+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/py4j/protocol.py", line 328, in get_return_value
+[2025-05-20T09:03:30.381+0000] {subprocess.py:92} INFO -     format(target_id, ".", name), value)
+[2025-05-20T09:03:30.382+0000] {subprocess.py:92} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o59.jdbc.
+[2025-05-20T09:03:30.383+0000] {subprocess.py:92} INFO - : org.apache.spark.SparkException: Job aborted due to stage failure: Task 5 in stage 8.0 failed 1 times, most recent failure: Lost task 5.0 in stage 8.0 (TID 23) (6c958a96284c executor driver): java.sql.BatchUpdateException: Batch entry 0 INSERT INTO crash ("date_id","road_id","traffic_control_device","weather_condition","lighting_condition","first_crash_type","crash_type","intersection_related_i","damage","prim_contributory_cause","num_units","most_severe_injury","injuries_total","injuries_fatal","injuries_incapacitating","injuries_non_incapacitating","injuries_reported_not_evident","injuries_no_indication") VALUES (186200,436,'NO CONTROLS','CLEAR','DAYLIGHT','PEDALCYCLIST','INJURY AND / OR TOW DUE TO CRASH','Y','OVER $1,500','UNABLE TO DETERMINE',2,'NONINCAPACITATING INJURY',1.0,0.0,0.0,1.0,0.0,1.0) was aborted: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.384+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".  Call getNextException to see other errors in the batch.
+[2025-05-20T09:03:30.384+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-20T09:03:30.386+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2025-05-20T09:03:30.387+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2025-05-20T09:03:30.388+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2025-05-20T09:03:30.388+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2025-05-20T09:03:30.389+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2025-05-20T09:03:30.390+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2025-05-20T09:03:30.390+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-20T09:03:30.391+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-20T09:03:30.392+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-20T09:03:30.392+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-20T09:03:30.393+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-20T09:03:30.394+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-20T09:03:30.394+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-20T09:03:30.395+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-20T09:03:30.395+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-20T09:03:30.396+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-20T09:03:30.397+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-20T09:03:30.397+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-20T09:03:30.398+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-20T09:03:30.399+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-20T09:03:30.399+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-20T09:03:30.400+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-20T09:03:30.400+0000] {subprocess.py:92} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.401+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".
+[2025-05-20T09:03:30.401+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-20T09:03:30.402+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-20T09:03:30.402+0000] {subprocess.py:92} INFO - 	... 21 more
+[2025-05-20T09:03:30.403+0000] {subprocess.py:92} INFO - 
+[2025-05-20T09:03:30.404+0000] {subprocess.py:92} INFO - Driver stacktrace:
+[2025-05-20T09:03:30.404+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.failJobAndIndependentStages(DAGScheduler.scala:2258)
+[2025-05-20T09:03:30.404+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2(DAGScheduler.scala:2207)
+[2025-05-20T09:03:30.405+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$abortStage$2$adapted(DAGScheduler.scala:2206)
+[2025-05-20T09:03:30.406+0000] {subprocess.py:92} INFO - 	at scala.collection.mutable.ResizableArray.foreach(ResizableArray.scala:62)
+[2025-05-20T09:03:30.406+0000] {subprocess.py:92} INFO - 	at scala.collection.mutable.ResizableArray.foreach$(ResizableArray.scala:55)
+[2025-05-20T09:03:30.407+0000] {subprocess.py:92} INFO - 	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:49)
+[2025-05-20T09:03:30.407+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:2206)
+[2025-05-20T09:03:30.408+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1(DAGScheduler.scala:1079)
+[2025-05-20T09:03:30.408+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.$anonfun$handleTaskSetFailed$1$adapted(DAGScheduler.scala:1079)
+[2025-05-20T09:03:30.409+0000] {subprocess.py:92} INFO - 	at scala.Option.foreach(Option.scala:407)
+[2025-05-20T09:03:30.409+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:1079)
+[2025-05-20T09:03:30.409+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:2445)
+[2025-05-20T09:03:30.410+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2387)
+[2025-05-20T09:03:30.410+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:2376)
+[2025-05-20T09:03:30.411+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:49)
+[2025-05-20T09:03:30.411+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:868)
+[2025-05-20T09:03:30.411+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2196)
+[2025-05-20T09:03:30.412+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2217)
+[2025-05-20T09:03:30.412+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2236)
+[2025-05-20T09:03:30.413+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2261)
+[2025-05-20T09:03:30.413+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$1(RDD.scala:1020)
+[2025-05-20T09:03:30.414+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-20T09:03:30.415+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+[2025-05-20T09:03:30.415+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.withScope(RDD.scala:414)
+[2025-05-20T09:03:30.415+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:1018)
+[2025-05-20T09:03:30.416+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.saveTable(JdbcUtils.scala:854)
+[2025-05-20T09:03:30.416+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcRelationProvider.createRelation(JdbcRelationProvider.scala:68)
+[2025-05-20T09:03:30.416+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.SaveIntoDataSourceCommand.run(SaveIntoDataSourceCommand.scala:46)
+[2025-05-20T09:03:30.417+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult$lzycompute(commands.scala:70)
+[2025-05-20T09:03:30.417+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.sideEffectResult(commands.scala:68)
+[2025-05-20T09:03:30.418+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.ExecutedCommandExec.doExecute(commands.scala:90)
+[2025-05-20T09:03:30.418+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+[2025-05-20T09:03:30.418+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+[2025-05-20T09:03:30.418+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-20T09:03:30.419+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+[2025-05-20T09:03:30.419+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+[2025-05-20T09:03:30.420+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+[2025-05-20T09:03:30.421+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+[2025-05-20T09:03:30.421+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+[2025-05-20T09:03:30.421+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2025-05-20T09:03:30.422+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2025-05-20T09:03:30.422+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2025-05-20T09:03:30.422+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2025-05-20T09:03:30.423+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-05-20T09:03:30.423+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+[2025-05-20T09:03:30.424+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+[2025-05-20T09:03:30.424+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+[2025-05-20T09:03:30.425+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:301)
+[2025-05-20T09:03:30.425+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.jdbc(DataFrameWriter.scala:817)
+[2025-05-20T09:03:30.426+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-05-20T09:03:30.426+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-05-20T09:03:30.427+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-05-20T09:03:30.427+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-05-20T09:03:30.428+0000] {subprocess.py:92} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-05-20T09:03:30.428+0000] {subprocess.py:92} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-05-20T09:03:30.429+0000] {subprocess.py:92} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2025-05-20T09:03:30.429+0000] {subprocess.py:92} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-05-20T09:03:30.430+0000] {subprocess.py:92} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-05-20T09:03:30.430+0000] {subprocess.py:92} INFO - 	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-05-20T09:03:30.431+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-20T09:03:30.431+0000] {subprocess.py:92} INFO - Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO crash ("date_id","road_id","traffic_control_device","weather_condition","lighting_condition","first_crash_type","crash_type","intersection_related_i","damage","prim_contributory_cause","num_units","most_severe_injury","injuries_total","injuries_fatal","injuries_incapacitating","injuries_non_incapacitating","injuries_reported_not_evident","injuries_no_indication") VALUES (186200,436,'NO CONTROLS','CLEAR','DAYLIGHT','PEDALCYCLIST','INJURY AND / OR TOW DUE TO CRASH','Y','OVER $1,500','UNABLE TO DETERMINE',2,'NONINCAPACITATING INJURY',1.0,0.0,0.0,1.0,0.0,1.0) was aborted: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.432+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".  Call getNextException to see other errors in the batch.
+[2025-05-20T09:03:30.432+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:165)
+[2025-05-20T09:03:30.433+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2402)
+[2025-05-20T09:03:30.433+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2134)
+[2025-05-20T09:03:30.434+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1491)
+[2025-05-20T09:03:30.434+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1516)
+[2025-05-20T09:03:30.435+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:560)
+[2025-05-20T09:03:30.435+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.internalExecuteBatch(PgStatement.java:896)
+[2025-05-20T09:03:30.436+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:919)
+[2025-05-20T09:03:30.438+0000] {subprocess.py:92} INFO - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1685)
+[2025-05-20T09:03:30.438+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.savePartition(JdbcUtils.scala:687)
+[2025-05-20T09:03:30.439+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1(JdbcUtils.scala:856)
+[2025-05-20T09:03:30.439+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$saveTable$1$adapted(JdbcUtils.scala:854)
+[2025-05-20T09:03:30.439+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2(RDD.scala:1020)
+[2025-05-20T09:03:30.440+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$foreachPartition$2$adapted(RDD.scala:1020)
+[2025-05-20T09:03:30.440+0000] {subprocess.py:92} INFO - 	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2236)
+[2025-05-20T09:03:30.441+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+[2025-05-20T09:03:30.442+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:131)
+[2025-05-20T09:03:30.443+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-20T09:03:30.443+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-20T09:03:30.444+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-20T09:03:30.444+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-20T09:03:30.445+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-20T09:03:30.445+0000] {subprocess.py:92} INFO - 	... 1 more
+[2025-05-20T09:03:30.445+0000] {subprocess.py:92} INFO - Caused by: org.postgresql.util.PSQLException: ERROR: insert or update on table "crash" violates foreign key constraint "crash_date_id_fkey"
+[2025-05-20T09:03:30.446+0000] {subprocess.py:92} INFO -   Detail: Key (date_id)=(186200) is not present in table "date".
+[2025-05-20T09:03:30.446+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713)
+[2025-05-20T09:03:30.446+0000] {subprocess.py:92} INFO - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401)
+[2025-05-20T09:03:30.447+0000] {subprocess.py:92} INFO - 	... 21 more
+[2025-05-20T09:03:30.448+0000] {subprocess.py:92} INFO - 
+[2025-05-20T09:03:30.448+0000] {subprocess.py:92} INFO - 25/05/20 09:03:30 WARN TaskSetManager: Lost task 8.0 in stage 8.0 (TID 26) (6c958a96284c executor driver): TaskKilled (Stage cancelled)
+[2025-05-20T09:03:30.483+0000] {subprocess.py:92} INFO - 25/05/20 09:03:30 ERROR Utils: Uncaught exception in thread Executor task launch worker for task 3.0 in stage 8.0 (TID 21)
+[2025-05-20T09:03:30.495+0000] {subprocess.py:92} INFO - java.lang.NullPointerException
+[2025-05-20T09:03:30.499+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.$anonfun$run$2(Task.scala:152)
+[2025-05-20T09:03:30.501+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1419)
+[2025-05-20T09:03:30.502+0000] {subprocess.py:92} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:150)
+[2025-05-20T09:03:30.504+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:497)
+[2025-05-20T09:03:30.507+0000] {subprocess.py:92} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1439)
+[2025-05-20T09:03:30.509+0000] {subprocess.py:92} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:500)
+[2025-05-20T09:03:30.511+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[2025-05-20T09:03:30.513+0000] {subprocess.py:92} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[2025-05-20T09:03:30.515+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-20T09:03:30.835+0000] {subprocess.py:96} INFO - Command exited with return code 1
+[2025-05-20T09:03:30.856+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-20T09:03:30.864+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Load_Data, execution_date=20250520T090210, start_date=20250520T090252, end_date=20250520T090330
+[2025-05-20T09:03:30.885+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 5 for task Load_Data (Bash command failed. The command returned a non-zero exit code 1.; 1053)
+[2025-05-20T09:03:30.912+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-05-20T09:03:30.966+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

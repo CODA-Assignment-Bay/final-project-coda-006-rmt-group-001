@@ -1,0 +1,76 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expectation-crash_time-dataset",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "crash_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "sum_fatal_injuries"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "day_of_week",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "crash_hour",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_crashes",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_fatal_injuries",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

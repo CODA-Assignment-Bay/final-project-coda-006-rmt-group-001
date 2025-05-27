@@ -1,0 +1,68 @@
+[2025-05-22T15:43:50.771+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:43:50.781+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:43:50.782+0000] {taskinstance.py:1361} INFO - Starting attempt 6 of 7
+[2025-05-22T15:43:50.800+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Load_Data> on 2025-05-22 15:17:26.089500+00:00
+[2025-05-22T15:43:50.807+0000] {standard_task_runner.py:57} INFO - Started process 5780 to run task
+[2025-05-22T15:43:50.810+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Load_Data', 'manual__2025-05-22T15:17:26.089500+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpiuzm71wi']
+[2025-05-22T15:43:50.816+0000] {standard_task_runner.py:85} INFO - Job 25: Subtask Load_Data
+[2025-05-22T15:43:50.881+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Load_Data manual__2025-05-22T15:17:26.089500+00:00 [running]> on host 68da71f009b0
+[2025-05-22T15:43:50.984+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Load_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:17:26.089500+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-22T15:17:26.089500+00:00'
+[2025-05-22T15:43:50.986+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T15:43:50.988+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Load_Data.py']
+[2025-05-22T15:43:51.004+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T15:43:52.733+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T15:43:52.734+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T15:43:52.735+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T15:43:52.735+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T15:43:52.736+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T15:43:52.877+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T15:43:52.958+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T15:43:52.959+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T15:43:52.962+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T15:43:52.963+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-cfac6835-f68e-44a7-981d-2bf3d369a958;1.0
+[2025-05-22T15:43:52.964+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T15:43:53.052+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T15:43:53.074+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T15:43:53.087+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 119ms :: artifacts dl 5ms
+[2025-05-22T15:43:53.089+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-05-22T15:43:53.089+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T15:43:53.090+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T15:43:53.091+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:43:53.092+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T15:43:53.092+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T15:43:53.093+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:43:53.094+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T15:43:53.095+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T15:43:53.095+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-cfac6835-f68e-44a7-981d-2bf3d369a958
+[2025-05-22T15:43:53.096+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T15:43:53.096+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/5ms)
+[2025-05-22T15:43:53.273+0000] {subprocess.py:93} INFO - 25/05/22 15:43:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T15:43:53.522+0000] {subprocess.py:93} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T15:43:53.523+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-05-22T15:43:53.524+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T15:44:00.712+0000] {subprocess.py:93} INFO - [Stage 5:=====>                                                    (1 + 9) / 10]                                                                                Traceback (most recent call last):
+[2025-05-22T15:44:00.713+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/Load_Data.py", line 22, in <module>
+[2025-05-22T15:44:00.718+0000] {subprocess.py:93} INFO -     data_crash = data_crash.withColumn("crash_date", to_date("date", "yyyy-MM-dd"))
+[2025-05-22T15:44:00.718+0000] {subprocess.py:93} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:44:00.719+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/dataframe.py", line 2455, in withColumn
+[2025-05-22T15:44:00.720+0000] {subprocess.py:93} INFO -     return DataFrame(self._jdf.withColumn(colName, col._jc), self.sql_ctx)
+[2025-05-22T15:44:00.720+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:44:00.721+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1304, in __call__
+[2025-05-22T15:44:00.722+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2025-05-22T15:44:00.722+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2025-05-22T15:44:00.723+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/utils.py", line 117, in deco
+[2025-05-22T15:44:00.724+0000] {subprocess.py:93} INFO -     raise converted from None
+[2025-05-22T15:44:00.725+0000] {subprocess.py:93} INFO - pyspark.sql.utils.AnalysisException: cannot resolve '`date`' given input columns: [crash_date, crash_hour, crash_type, damage, first_crash_type, injuries_fatal, injuries_incapacitating, injuries_no_indication, injuries_non_incapacitating, injuries_reported_not_evident, injuries_total, intersection_related_i, lighting_condition, most_severe_injury, num_units, prim_contributory_cause, road_id, traffic_control_device, weather_condition];
+[2025-05-22T15:44:00.725+0000] {subprocess.py:93} INFO - 'Project [to_date('date, Some(yyyy-MM-dd)) AS crash_date#110, road_id#73, crash_hour#74, traffic_control_device#75, weather_condition#76, lighting_condition#77, first_crash_type#78, crash_type#79, intersection_related_i#80, damage#81, prim_contributory_cause#82, num_units#83, most_severe_injury#84, injuries_total#85, injuries_fatal#86, injuries_incapacitating#87, injuries_non_incapacitating#88, injuries_reported_not_evident#89, injuries_no_indication#90]
+[2025-05-22T15:44:00.726+0000] {subprocess.py:93} INFO - +- Relation[crash_date#72,road_id#73,crash_hour#74,traffic_control_device#75,weather_condition#76,lighting_condition#77,first_crash_type#78,crash_type#79,intersection_related_i#80,damage#81,prim_contributory_cause#82,num_units#83,most_severe_injury#84,injuries_total#85,injuries_fatal#86,injuries_incapacitating#87,injuries_non_incapacitating#88,injuries_reported_not_evident#89,injuries_no_indication#90] csv
+[2025-05-22T15:44:00.727+0000] {subprocess.py:93} INFO - 
+[2025-05-22T15:44:01.195+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-22T15:44:01.210+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T15:44:01.215+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Load_Data, execution_date=20250522T151726, start_date=20250522T154350, end_date=20250522T154401
+[2025-05-22T15:44:01.233+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 25 for task Load_Data (Bash command failed. The command returned a non-zero exit code 1.; 5780)
+[2025-05-22T15:44:01.264+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-22T15:44:01.291+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

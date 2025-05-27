@@ -1,0 +1,67 @@
+[2025-05-23T07:47:28.340+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Transform_Datamart_Data scheduled__2025-05-23T07:30:00+00:00 [queued]>
+[2025-05-23T07:47:28.349+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Transform_Datamart_Data scheduled__2025-05-23T07:30:00+00:00 [queued]>
+[2025-05-23T07:47:28.354+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-23T07:47:28.369+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Transform_Datamart_Data> on 2025-05-23 07:30:00+00:00
+[2025-05-23T07:47:28.380+0000] {standard_task_runner.py:57} INFO - Started process 19658 to run task
+[2025-05-23T07:47:28.383+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Transform_Datamart_Data', 'scheduled__2025-05-23T07:30:00+00:00', '--job-id', '69', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmp9qmap2g4']
+[2025-05-23T07:47:28.389+0000] {standard_task_runner.py:85} INFO - Job 69: Subtask Transform_Datamart_Data
+[2025-05-23T07:47:28.440+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Transform_Datamart_Data scheduled__2025-05-23T07:30:00+00:00 [running]> on host 2d3af573cb97
+[2025-05-23T07:47:28.523+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Transform_Datamart_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-23T07:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-23T07:30:00+00:00'
+[2025-05-23T07:47:28.524+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-23T07:47:28.525+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Transform_Datamart_Data.py']
+[2025-05-23T07:47:28.536+0000] {subprocess.py:86} INFO - Output:
+[2025-05-23T07:47:29.973+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-23T07:47:29.974+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-23T07:47:29.974+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-23T07:47:29.975+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-23T07:47:29.976+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-23T07:47:30.120+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-23T07:47:30.221+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-23T07:47:30.222+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-23T07:47:30.225+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-23T07:47:30.226+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-a4342779-29a5-4ca8-aef9-1a7036ea0b72;1.0
+[2025-05-23T07:47:30.227+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-23T07:47:30.313+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-23T07:47:30.334+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-23T07:47:30.347+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 117ms :: artifacts dl 3ms
+[2025-05-23T07:47:30.347+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-05-23T07:47:30.348+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-23T07:47:30.349+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-23T07:47:30.349+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-23T07:47:30.350+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-23T07:47:30.350+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-23T07:47:30.351+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-23T07:47:30.351+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-23T07:47:30.352+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-23T07:47:30.353+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-a4342779-29a5-4ca8-aef9-1a7036ea0b72
+[2025-05-23T07:47:30.353+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-23T07:47:30.355+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/4ms)
+[2025-05-23T07:47:30.514+0000] {subprocess.py:93} INFO - 25/05/23 07:47:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-23T07:47:30.752+0000] {subprocess.py:93} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-23T07:47:30.753+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-05-23T07:47:30.754+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-23T07:47:41.076+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-05-23T07:47:41.099+0000] {process_utils.py:131} INFO - Sending 15 to group 19658. PIDs of all processes in the group: [19659, 19660, 19680, 19658]
+[2025-05-23T07:47:41.101+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 19658
+[2025-05-23T07:47:41.101+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-23T07:47:41.103+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-05-23T07:47:41.119+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=19660, status='terminated', started='07:47:27') (19660) terminated with exit code None
+[2025-05-23T07:47:41.123+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 201, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-05-23T07:47:41.147+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Transform_Datamart_Data, execution_date=20250523T073000, start_date=20250523T074728, end_date=20250523T074741
+[2025-05-23T07:47:41.173+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 69 for task Transform_Datamart_Data (Task received SIGTERM signal; 19658)
+[2025-05-23T07:47:41.219+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=19658, status='terminated', exitcode=1, started='07:47:27') (19658) terminated with exit code 1
+[2025-05-23T07:47:41.475+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=19659, status='terminated', started='07:47:27') (19659) terminated with exit code None
+[2025-05-23T07:47:41.770+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=19680, status='terminated', started='07:47:28') (19680) terminated with exit code None
+[2025-05-23T07:47:41.770+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 143
+[2025-05-23T07:47:41.793+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-23T07:47:43.304+0000] {local_task_job_runner.py:115} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-05-23T07:47:43.305+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 143

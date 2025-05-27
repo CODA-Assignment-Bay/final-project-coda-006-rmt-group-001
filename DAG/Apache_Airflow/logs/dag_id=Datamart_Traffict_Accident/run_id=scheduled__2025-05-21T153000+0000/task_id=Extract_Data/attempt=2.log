@@ -1,0 +1,185 @@
+[2025-05-22T14:27:46.916+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Datamart_Traffict_Accident.Extract_Data scheduled__2025-05-21T15:30:00+00:00 [queued]>
+[2025-05-22T14:27:46.929+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Datamart_Traffict_Accident.Extract_Data scheduled__2025-05-21T15:30:00+00:00 [queued]>
+[2025-05-22T14:27:46.931+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:27:46.932+0000] {taskinstance.py:1369} INFO - Starting attempt 2 of 2
+[2025-05-22T14:27:46.933+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:27:46.950+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Extract_Data> on 2025-05-21 15:30:00+00:00
+[2025-05-22T14:27:46.958+0000] {standard_task_runner.py:52} INFO - Started process 244 to run task
+[2025-05-22T14:27:46.963+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Datamart_Traffict_Accident', 'Extract_Data', 'scheduled__2025-05-21T15:30:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/Datamart_Traffict_Accident.py', '--cfg-path', '/tmp/tmpv6ffnaht', '--error-file', '/tmp/tmpqpp_b2g0']
+[2025-05-22T14:27:46.965+0000] {standard_task_runner.py:80} INFO - Job 8: Subtask Extract_Data
+[2025-05-22T14:27:47.079+0000] {task_command.py:371} INFO - Running <TaskInstance: Datamart_Traffict_Accident.Extract_Data scheduled__2025-05-21T15:30:00+00:00 [running]> on host 2262c451ca30
+[2025-05-22T14:27:47.179+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Datamart_Traffict_Accident
+AIRFLOW_CTX_TASK_ID=Extract_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-21T15:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-21T15:30:00+00:00
+[2025-05-22T14:27:47.181+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-22T14:27:47.185+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Extract_Datamart_Data.py']
+[2025-05-22T14:27:47.202+0000] {subprocess.py:85} INFO - Output:
+[2025-05-22T14:27:50.239+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T14:27:50.241+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T14:27:50.242+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T14:27:50.242+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T14:27:50.242+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T14:27:50.480+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T14:27:50.596+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T14:27:50.597+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T14:27:50.601+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T14:27:50.603+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-e3eb8a8b-c003-41ad-8cf2-cd8218abc664;1.0
+[2025-05-22T14:27:50.603+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:27:50.768+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T14:27:50.813+0000] {subprocess.py:92} INFO - 	found org.checkerframework#checker-qual;3.31.0 in spark-list
+[2025-05-22T14:27:50.860+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 240ms :: artifacts dl 17ms
+[2025-05-22T14:27:50.861+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-22T14:27:50.862+0000] {subprocess.py:92} INFO - 	org.checkerframework#checker-qual;3.31.0 from spark-list in [default]
+[2025-05-22T14:27:50.862+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T14:27:50.863+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:27:50.864+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T14:27:50.864+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T14:27:50.865+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:27:50.865+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T14:27:50.866+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:27:50.867+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:27:50.867+0000] {subprocess.py:92} INFO - :: problems summary ::
+[2025-05-22T14:27:50.868+0000] {subprocess.py:92} INFO - :::: ERRORS
+[2025-05-22T14:27:50.868+0000] {subprocess.py:92} INFO - 	unknown resolver null
+[2025-05-22T14:27:50.870+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:27:50.871+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:27:50.871+0000] {subprocess.py:92} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-05-22T14:27:50.872+0000] {subprocess.py:92} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-e3eb8a8b-c003-41ad-8cf2-cd8218abc664
+[2025-05-22T14:27:50.873+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:27:50.878+0000] {subprocess.py:92} INFO - 	0 artifacts copied, 2 already retrieved (0kB/9ms)
+[2025-05-22T14:27:51.194+0000] {subprocess.py:92} INFO - 25/05/22 14:27:51 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T14:27:51.509+0000] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T14:27:51.510+0000] {subprocess.py:92} INFO - Setting default log level to "WARN".
+[2025-05-22T14:27:51.510+0000] {subprocess.py:92} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T14:27:52.691+0000] {subprocess.py:92} INFO - 25/05/22 14:27:52 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2025-05-22T14:27:52.692+0000] {subprocess.py:92} INFO - 25/05/22 14:27:52 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+[2025-05-22T14:28:01.499+0000] {subprocess.py:92} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                25/05/22 14:28:01 ERROR FileFormatWriter: Aborting job f80aebe3-c08a-4840-833a-cc782b2aedcf.
+[2025-05-22T14:28:01.501+0000] {subprocess.py:92} INFO - java.io.FileNotFoundException: File file:/opt/***/data/tmp_date_csv/_temporary/0/task_20250522142759535197615001857373_0000_m_000000/part-00000-f5e9039f-890e-4866-9408-455ede5751d2-c000.csv does not exist
+[2025-05-22T14:28:01.502+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:666)
+[2025-05-22T14:28:01.502+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:987)
+[2025-05-22T14:28:01.503+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:656)
+[2025-05-22T14:28:01.505+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:386)
+[2025-05-22T14:28:01.506+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:337)
+[2025-05-22T14:28:01.507+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.rename(RawLocalFileSystem.java:397)
+[2025-05-22T14:28:01.510+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.ChecksumFileSystem.rename(ChecksumFileSystem.java:617)
+[2025-05-22T14:28:01.512+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem.rename(ProxyLocalFileSystem.java:34)
+[2025-05-22T14:28:01.515+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.mergePaths(FileOutputCommitter.java:472)
+[2025-05-22T14:28:01.516+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.mergePaths(FileOutputCommitter.java:486)
+[2025-05-22T14:28:01.517+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJobInternal(FileOutputCommitter.java:403)
+[2025-05-22T14:28:01.518+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJob(FileOutputCommitter.java:375)
+[2025-05-22T14:28:01.518+0000] {subprocess.py:92} INFO - 	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.commitJob(HadoopMapReduceCommitProtocol.scala:182)
+[2025-05-22T14:28:01.520+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:220)
+[2025-05-22T14:28:01.520+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+[2025-05-22T14:28:01.521+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+[2025-05-22T14:28:01.522+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+[2025-05-22T14:28:01.523+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+[2025-05-22T14:28:01.523+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+[2025-05-22T14:28:01.524+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+[2025-05-22T14:28:01.525+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-22T14:28:01.526+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+[2025-05-22T14:28:01.527+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+[2025-05-22T14:28:01.528+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+[2025-05-22T14:28:01.529+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+[2025-05-22T14:28:01.530+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+[2025-05-22T14:28:01.531+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2025-05-22T14:28:01.531+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2025-05-22T14:28:01.532+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2025-05-22T14:28:01.533+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2025-05-22T14:28:01.534+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-05-22T14:28:01.535+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+[2025-05-22T14:28:01.536+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+[2025-05-22T14:28:01.536+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+[2025-05-22T14:28:01.537+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+[2025-05-22T14:28:01.538+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+[2025-05-22T14:28:01.539+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-05-22T14:28:01.540+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-05-22T14:28:01.541+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-05-22T14:28:01.541+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-05-22T14:28:01.542+0000] {subprocess.py:92} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-05-22T14:28:01.543+0000] {subprocess.py:92} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-05-22T14:28:01.543+0000] {subprocess.py:92} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2025-05-22T14:28:01.544+0000] {subprocess.py:92} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-05-22T14:28:01.545+0000] {subprocess.py:92} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-05-22T14:28:01.545+0000] {subprocess.py:92} INFO - 	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-05-22T14:28:01.546+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T14:28:01.586+0000] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2025-05-22T14:28:01.586+0000] {subprocess.py:92} INFO -   File "/opt/***/scripts/Extract_Datamart_Data.py", line 31, in <module>
+[2025-05-22T14:28:01.587+0000] {subprocess.py:92} INFO -     data_Date.coalesce(1).write.csv(output_dir, header=True, mode="overwrite")
+[2025-05-22T14:28:01.587+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/readwriter.py", line 1372, in csv
+[2025-05-22T14:28:01.588+0000] {subprocess.py:92} INFO -     self._jwrite.csv(path)
+[2025-05-22T14:28:01.588+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1305, in __call__
+[2025-05-22T14:28:01.589+0000] {subprocess.py:92} INFO -     answer, self.gateway_client, self.target_id, self.name)
+[2025-05-22T14:28:01.590+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/utils.py", line 111, in deco
+[2025-05-22T14:28:01.590+0000] {subprocess.py:92} INFO -     return f(*a, **kw)
+[2025-05-22T14:28:01.591+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/py4j/protocol.py", line 328, in get_return_value
+[2025-05-22T14:28:01.591+0000] {subprocess.py:92} INFO -     format(target_id, ".", name), value)
+[2025-05-22T14:28:01.592+0000] {subprocess.py:92} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o45.csv.
+[2025-05-22T14:28:01.592+0000] {subprocess.py:92} INFO - : org.apache.spark.SparkException: Job aborted.
+[2025-05-22T14:28:01.593+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:231)
+[2025-05-22T14:28:01.593+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:188)
+[2025-05-22T14:28:01.594+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+[2025-05-22T14:28:01.594+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+[2025-05-22T14:28:01.596+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+[2025-05-22T14:28:01.597+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+[2025-05-22T14:28:01.597+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+[2025-05-22T14:28:01.597+0000] {subprocess.py:92} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-22T14:28:01.598+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+[2025-05-22T14:28:01.599+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+[2025-05-22T14:28:01.599+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+[2025-05-22T14:28:01.599+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+[2025-05-22T14:28:01.600+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+[2025-05-22T14:28:01.601+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2025-05-22T14:28:01.601+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2025-05-22T14:28:01.602+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2025-05-22T14:28:01.604+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2025-05-22T14:28:01.604+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-05-22T14:28:01.605+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+[2025-05-22T14:28:01.606+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+[2025-05-22T14:28:01.606+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+[2025-05-22T14:28:01.607+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+[2025-05-22T14:28:01.607+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+[2025-05-22T14:28:01.608+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-05-22T14:28:01.609+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-05-22T14:28:01.610+0000] {subprocess.py:92} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-05-22T14:28:01.610+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-05-22T14:28:01.611+0000] {subprocess.py:92} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-05-22T14:28:01.611+0000] {subprocess.py:92} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-05-22T14:28:01.612+0000] {subprocess.py:92} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2025-05-22T14:28:01.613+0000] {subprocess.py:92} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-05-22T14:28:01.614+0000] {subprocess.py:92} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-05-22T14:28:01.614+0000] {subprocess.py:92} INFO - 	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-05-22T14:28:01.614+0000] {subprocess.py:92} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T14:28:01.615+0000] {subprocess.py:92} INFO - Caused by: java.io.FileNotFoundException: File file:/opt/***/data/tmp_date_csv/_temporary/0/task_20250522142759535197615001857373_0000_m_000000/part-00000-f5e9039f-890e-4866-9408-455ede5751d2-c000.csv does not exist
+[2025-05-22T14:28:01.616+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.deprecatedGetFileStatus(RawLocalFileSystem.java:666)
+[2025-05-22T14:28:01.616+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileLinkStatusInternal(RawLocalFileSystem.java:987)
+[2025-05-22T14:28:01.617+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.getFileStatus(RawLocalFileSystem.java:656)
+[2025-05-22T14:28:01.617+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:386)
+[2025-05-22T14:28:01.618+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.FileUtil.copy(FileUtil.java:337)
+[2025-05-22T14:28:01.618+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.RawLocalFileSystem.rename(RawLocalFileSystem.java:397)
+[2025-05-22T14:28:01.619+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.fs.ChecksumFileSystem.rename(ChecksumFileSystem.java:617)
+[2025-05-22T14:28:01.620+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.hive.ql.io.ProxyLocalFileSystem.rename(ProxyLocalFileSystem.java:34)
+[2025-05-22T14:28:01.621+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.mergePaths(FileOutputCommitter.java:472)
+[2025-05-22T14:28:01.622+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.mergePaths(FileOutputCommitter.java:486)
+[2025-05-22T14:28:01.623+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJobInternal(FileOutputCommitter.java:403)
+[2025-05-22T14:28:01.624+0000] {subprocess.py:92} INFO - 	at org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter.commitJob(FileOutputCommitter.java:375)
+[2025-05-22T14:28:01.624+0000] {subprocess.py:92} INFO - 	at org.apache.spark.internal.io.HadoopMapReduceCommitProtocol.commitJob(HadoopMapReduceCommitProtocol.scala:182)
+[2025-05-22T14:28:01.625+0000] {subprocess.py:92} INFO - 	at org.apache.spark.sql.execution.datasources.FileFormatWriter$.write(FileFormatWriter.scala:220)
+[2025-05-22T14:28:01.626+0000] {subprocess.py:92} INFO - 	... 33 more
+[2025-05-22T14:28:01.626+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:28:02.067+0000] {subprocess.py:96} INFO - Command exited with return code 1
+[2025-05-22T14:28:02.086+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T14:28:02.091+0000] {taskinstance.py:1412} INFO - Marking task as FAILED. dag_id=Datamart_Traffict_Accident, task_id=Extract_Data, execution_date=20250521T153000, start_date=20250522T142746, end_date=20250522T142802
+[2025-05-22T14:28:02.106+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 8 for task Extract_Data (Bash command failed. The command returned a non-zero exit code 1.; 244)
+[2025-05-22T14:28:02.119+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-05-22T14:28:02.185+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

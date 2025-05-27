@@ -1,0 +1,52 @@
+[2025-05-22T15:45:33.711+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [queued]>
+[2025-05-22T15:45:33.730+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [queued]>
+[2025-05-22T15:45:33.731+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T15:45:33.757+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Validation_Data> on 2025-05-22 15:30:00+00:00
+[2025-05-22T15:45:33.767+0000] {standard_task_runner.py:57} INFO - Started process 6686 to run task
+[2025-05-22T15:45:33.774+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Validation_Data', 'scheduled__2025-05-22T15:30:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpfcg8qxx0']
+[2025-05-22T15:45:33.781+0000] {standard_task_runner.py:85} INFO - Job 28: Subtask Validation_Data
+[2025-05-22T15:45:33.869+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [running]> on host 68da71f009b0
+[2025-05-22T15:45:33.964+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Validation_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-22T15:30:00+00:00'
+[2025-05-22T15:45:33.966+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T15:45:33.967+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/build_expectations.py']
+[2025-05-22T15:45:33.980+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T15:45:40.058+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-22T15:45:40.059+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/build_expectations.py", line 17, in <module>
+[2025-05-22T15:45:40.064+0000] {subprocess.py:93} INFO -     ds_crash = context.sources.add_pandas(datasource_crash)
+[2025-05-22T15:45:40.066+0000] {subprocess.py:93} INFO -                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:45:40.067+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/great_expectations/datasource/fluent/sources.py", line 473, in add_datasource
+[2025-05-22T15:45:40.068+0000] {subprocess.py:93} INFO -     datasource = self._data_context._add_fluent_datasource(datasource)
+[2025-05-22T15:45:40.069+0000] {subprocess.py:93} INFO -                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:45:40.071+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/great_expectations/data_context/data_context/abstract_data_context.py", line 780, in _add_fluent_datasource
+[2025-05-22T15:45:40.072+0000] {subprocess.py:93} INFO -     raise gx_exceptions.DataContextError(
+[2025-05-22T15:45:40.073+0000] {subprocess.py:93} INFO - great_expectations.exceptions.exceptions.DataContextError: Can not write the fluent datasource dataset-table-Crash because a datasource of that name already exists in the data context.
+[2025-05-22T15:45:41.065+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-22T15:45:41.079+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T15:45:41.088+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Validation_Data, execution_date=20250522T153000, start_date=20250522T154533, end_date=20250522T154541
+[2025-05-22T15:45:41.108+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 28 for task Validation_Data (Bash command failed. The command returned a non-zero exit code 1.; 6686)
+[2025-05-22T15:45:41.138+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-22T15:45:41.181+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-22T16:02:41.475+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [queued]>
+[2025-05-22T16:02:41.487+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [queued]>
+[2025-05-22T16:02:41.488+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T16:02:41.503+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Validation_Data> on 2025-05-22 15:30:00+00:00
+[2025-05-22T16:02:41.511+0000] {standard_task_runner.py:57} INFO - Started process 1937 to run task
+[2025-05-22T16:02:41.514+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Validation_Data', 'scheduled__2025-05-22T15:30:00+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpzkd09_ep']
+[2025-05-22T16:02:41.519+0000] {standard_task_runner.py:85} INFO - Job 8: Subtask Validation_Data
+[2025-05-22T16:02:41.572+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Validation_Data scheduled__2025-05-22T15:30:00+00:00 [running]> on host 1f18d06af689
+[2025-05-22T16:02:41.661+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Validation_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-22T15:30:00+00:00'
+[2025-05-22T16:02:41.663+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T16:02:41.665+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/validation-etl.py']
+[2025-05-22T16:02:41.677+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T16:02:52.679+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/13 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/13 [00:00<?, ?it/s]Calculating Metrics:  15%|█▌        | 2/13 [00:00<00:00, 2818.75it/s]Calculating Metrics:  15%|█▌        | 2/13 [00:00<00:00, 296.48it/s] Calculating Metrics:  23%|██▎       | 3/13 [00:00<00:00, 420.82it/s]Calculating Metrics:  23%|██▎       | 3/13 [00:00<00:00, 236.85it/s]Calculating Metrics:  38%|███▊      | 5/13 [00:00<00:00, 251.34it/s]Calculating Metrics:  38%|███▊      | 5/13 [00:00<00:00, 206.10it/s]Calculating Metrics: 100%|██████████| 13/13 [00:00<00:00, 393.17it/s]Calculating Metrics: 100%|██████████| 13/13 [00:00<00:00, 372.39it/s]Calculating Metrics: 100%|██████████| 13/13 [00:00<00:00, 371.09it/s]Calculating Metrics: 100%|██████████| 13/13 [00:00<00:00, 370.07it/s]
+[2025-05-22T16:02:55.516+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/38 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/38 [00:00<?, ?it/s]Calculating Metrics:   5%|▌         | 2/38 [00:00<00:00, 2559.06it/s]Calculating Metrics:   5%|▌         | 2/38 [00:00<00:00, 87.98it/s]  Calculating Metrics:   8%|▊         | 3/38 [00:00<00:00, 129.84it/s]Calculating Metrics:   8%|▊         | 3/38 [00:00<00:00, 67.08it/s] Calculating Metrics:  34%|███▍      | 13/38 [00:00<00:00, 229.59it/s]Calculating Metrics:  34%|███▍      | 13/38 [00:00<00:00, 168.38it/s]Calculating Metrics: 100%|██████████| 38/38 [00:00<00:00, 393.56it/s]Calculating Metrics: 100%|██████████| 38/38 [00:00<00:00, 368.15it/s]Calculating Metrics: 100%|██████████| 38/38 [00:00<00:00, 368.15it/s]Calculating Metrics: 100%|██████████| 38/38 [00:00<00:00, 368.15it/s]Calculating Metrics: 100%|██████████| 38/38 [00:00<00:00, 367.02it/s]
+[2025-05-22T16:02:58.428+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/23 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/23 [00:00<?, ?it/s]Calculating Metrics:   9%|▊         | 2/23 [00:00<00:00, 2922.86it/s]Calculating Metrics:   9%|▊         | 2/23 [00:00<00:00, 169.41it/s] Calculating Metrics:  13%|█▎        | 3/23 [00:00<00:00, 247.64it/s]Calculating Metrics:  13%|█▎        | 3/23 [00:00<00:00, 140.73it/s]Calculating Metrics:  30%|███       | 7/23 [00:00<00:00, 298.38it/s]Calculating Metrics:  30%|███       | 7/23 [00:00<00:00, 222.03it/s]Calculating Metrics: 100%|██████████| 23/23 [00:00<00:00, 582.70it/s]Calculating Metrics: 100%|██████████| 23/23 [00:00<00:00, 527.57it/s]Calculating Metrics: 100%|██████████| 23/23 [00:00<00:00, 525.49it/s]Calculating Metrics: 100%|██████████| 23/23 [00:00<00:00, 523.74it/s]
+[2025-05-22T16:03:04.552+0000] {subprocess.py:93} INFO - Data validation succeeded.
+[2025-05-22T16:03:05.629+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-22T16:03:05.681+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Scheduler_Traffict_Accident, task_id=Validation_Data, execution_date=20250522T153000, start_date=20250522T160241, end_date=20250522T160305
+[2025-05-22T16:03:05.716+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-22T16:03:05.737+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

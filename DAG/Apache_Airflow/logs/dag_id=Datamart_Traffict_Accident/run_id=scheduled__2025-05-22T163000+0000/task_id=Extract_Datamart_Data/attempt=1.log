@@ -1,0 +1,48 @@
+[2025-05-22T16:45:00.523+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Datamart_Traffict_Accident.Extract_Datamart_Data scheduled__2025-05-22T16:30:00+00:00 [queued]>
+[2025-05-22T16:45:00.531+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Datamart_Traffict_Accident.Extract_Datamart_Data scheduled__2025-05-22T16:30:00+00:00 [queued]>
+[2025-05-22T16:45:00.532+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T16:45:00.546+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Extract_Datamart_Data> on 2025-05-22 16:30:00+00:00
+[2025-05-22T16:45:00.552+0000] {standard_task_runner.py:57} INFO - Started process 4068 to run task
+[2025-05-22T16:45:00.555+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Datamart_Traffict_Accident', 'Extract_Datamart_Data', 'scheduled__2025-05-22T16:30:00+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/Datamart_Traffict_Accident.py', '--cfg-path', '/tmp/tmp4dlkaak7']
+[2025-05-22T16:45:00.559+0000] {standard_task_runner.py:85} INFO - Job 16: Subtask Extract_Datamart_Data
+[2025-05-22T16:45:00.610+0000] {task_command.py:416} INFO - Running <TaskInstance: Datamart_Traffict_Accident.Extract_Datamart_Data scheduled__2025-05-22T16:30:00+00:00 [running]> on host 37de2a8083a6
+[2025-05-22T16:45:00.692+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Datamart_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Extract_Datamart_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T16:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-22T16:30:00+00:00'
+[2025-05-22T16:45:00.694+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T16:45:00.695+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Extract_Datamart_Data.py']
+[2025-05-22T16:45:00.705+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T16:45:02.161+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T16:45:02.162+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T16:45:02.162+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T16:45:02.163+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T16:45:02.163+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T16:45:02.305+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T16:45:02.384+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T16:45:02.385+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T16:45:02.388+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T16:45:02.389+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-9a8adc3a-9519-4988-bce5-d1cc9b07cdfd;1.0
+[2025-05-22T16:45:02.390+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T16:45:02.485+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T16:45:02.508+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T16:45:02.525+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 129ms :: artifacts dl 6ms
+[2025-05-22T16:45:02.526+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-05-22T16:45:02.526+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T16:45:02.527+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T16:45:02.527+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:45:02.528+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T16:45:02.529+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T16:45:02.530+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:45:02.531+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T16:45:02.532+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:45:02.532+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-9a8adc3a-9519-4988-bce5-d1cc9b07cdfd
+[2025-05-22T16:45:02.532+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T16:45:02.535+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/5ms)
+[2025-05-22T16:45:02.730+0000] {subprocess.py:93} INFO - 25/05/22 16:45:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T16:45:02.965+0000] {subprocess.py:93} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T16:45:02.966+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-05-22T16:45:02.967+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T16:45:21.274+0000] {subprocess.py:93} INFO - [Stage 0:>                                                          (0 + 1) / 1]                                                                                [Stage 1:>                                                          (0 + 1) / 1]                                                                                [Stage 2:>                                                          (0 + 1) / 1]                                                                                Saved: /opt/***/data/roadway.csv
+[2025-05-22T16:45:21.275+0000] {subprocess.py:93} INFO - Saved: /opt/***/data/crash.csv
+[2025-05-22T16:45:21.760+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-05-22T16:45:21.796+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Datamart_Traffict_Accident, task_id=Extract_Datamart_Data, execution_date=20250522T163000, start_date=20250522T164500, end_date=20250522T164521
+[2025-05-22T16:45:21.846+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2025-05-22T16:45:21.883+0000] {taskinstance.py:2778} INFO - 1 downstream tasks scheduled from follow-on schedule check

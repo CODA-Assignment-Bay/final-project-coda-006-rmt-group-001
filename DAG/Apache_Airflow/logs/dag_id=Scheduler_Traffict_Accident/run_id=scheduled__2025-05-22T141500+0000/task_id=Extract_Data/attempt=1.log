@@ -1,0 +1,259 @@
+[2025-05-22T14:34:17.226+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [queued]>
+[2025-05-22T14:34:17.240+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [queued]>
+[2025-05-22T14:34:17.241+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:34:17.242+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-05-22T14:34:17.242+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:34:17.261+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Extract_Data> on 2025-05-22 14:15:00+00:00
+[2025-05-22T14:34:17.268+0000] {standard_task_runner.py:52} INFO - Started process 235 to run task
+[2025-05-22T14:34:17.272+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Extract_Data', 'scheduled__2025-05-22T14:15:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpvm7vx2iw', '--error-file', '/tmp/tmpjhc9ki1q']
+[2025-05-22T14:34:17.275+0000] {standard_task_runner.py:80} INFO - Job 3: Subtask Extract_Data
+[2025-05-22T14:34:17.360+0000] {task_command.py:371} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [running]> on host b86084e9eb9d
+[2025-05-22T14:34:17.451+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Scheduler_Traffict_Accident
+AIRFLOW_CTX_TASK_ID=Extract_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-22T14:15:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-22T14:15:00+00:00
+[2025-05-22T14:34:17.454+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-22T14:34:17.457+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Extract_Data.py']
+[2025-05-22T14:34:17.468+0000] {subprocess.py:85} INFO - Output:
+[2025-05-22T14:34:19.488+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T14:34:19.489+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T14:34:19.490+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T14:34:19.490+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T14:34:19.491+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T14:34:19.662+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T14:34:19.756+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T14:34:19.757+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T14:34:19.760+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T14:34:19.762+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-1e61916d-403c-4b2f-9ce2-8c11af9a8e5f;1.0
+[2025-05-22T14:34:19.762+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:34:22.161+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T14:34:23.283+0000] {subprocess.py:92} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T14:34:23.296+0000] {subprocess.py:92} INFO - downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar ...
+[2025-05-22T14:34:24.614+0000] {subprocess.py:92} INFO - downloading https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar ...
+[2025-05-22T14:34:24.861+0000] {subprocess.py:92} INFO - 	[SUCCESSFUL ] org.checkerframework#checker-qual;3.31.0!checker-qual.jar (248ms)
+[2025-05-22T14:34:24.863+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 3533ms :: artifacts dl 1568ms
+[2025-05-22T14:34:24.863+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-22T14:34:24.864+0000] {subprocess.py:92} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T14:34:24.864+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T14:34:24.865+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:24.865+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T14:34:24.866+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T14:34:24.866+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:24.867+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   2   |   2   |   0   ||   2   |   1   |
+[2025-05-22T14:34:24.868+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:24.868+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.869+0000] {subprocess.py:92} INFO - :: problems summary ::
+[2025-05-22T14:34:24.869+0000] {subprocess.py:92} INFO - :::: WARNINGS
+[2025-05-22T14:34:24.870+0000] {subprocess.py:92} INFO - 		[FAILED     ] org.postgresql#postgresql;42.6.0!postgresql.jar: Downloaded file size doesn't match expected Content Length for https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar. Please retry. (1315ms)
+[2025-05-22T14:34:24.871+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.871+0000] {subprocess.py:92} INFO - 		[FAILED     ] org.postgresql#postgresql;42.6.0!postgresql.jar: Downloaded file size doesn't match expected Content Length for https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar. Please retry. (1315ms)
+[2025-05-22T14:34:24.872+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.873+0000] {subprocess.py:92} INFO - 	==== central: tried
+[2025-05-22T14:34:24.874+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.875+0000] {subprocess.py:92} INFO - 	  https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar
+[2025-05-22T14:34:24.876+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.876+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:34:24.877+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.877+0000] {subprocess.py:92} INFO - 		::              FAILED DOWNLOADS            ::
+[2025-05-22T14:34:24.878+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.878+0000] {subprocess.py:92} INFO - 		:: ^ see resolution messages for details  ^ ::
+[2025-05-22T14:34:24.879+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.879+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:34:24.880+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.881+0000] {subprocess.py:92} INFO - 		:: org.postgresql#postgresql;42.6.0!postgresql.jar
+[2025-05-22T14:34:24.881+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.882+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:34:24.883+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.883+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.884+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:24.884+0000] {subprocess.py:92} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-05-22T14:34:24.885+0000] {subprocess.py:92} INFO - Exception in thread "main" java.lang.RuntimeException: [download failed: org.postgresql#postgresql;42.6.0!postgresql.jar]
+[2025-05-22T14:34:24.885+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1429)
+[2025-05-22T14:34:24.886+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:54)
+[2025-05-22T14:34:24.886+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:308)
+[2025-05-22T14:34:24.887+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+[2025-05-22T14:34:24.887+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+[2025-05-22T14:34:24.888+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+[2025-05-22T14:34:24.889+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+[2025-05-22T14:34:24.889+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1039)
+[2025-05-22T14:34:24.890+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1048)
+[2025-05-22T14:34:24.890+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-05-22T14:34:24.925+0000] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2025-05-22T14:34:24.926+0000] {subprocess.py:92} INFO -   File "/opt/***/scripts/Extract_Data.py", line 9, in <module>
+[2025-05-22T14:34:24.927+0000] {subprocess.py:92} INFO -     .config("spark.jars.packages", "org.postgresql:postgresql:42.6.0") \
+[2025-05-22T14:34:24.928+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 228, in getOrCreate
+[2025-05-22T14:34:24.928+0000] {subprocess.py:92} INFO -     sc = SparkContext.getOrCreate(sparkConf)
+[2025-05-22T14:34:24.929+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 384, in getOrCreate
+[2025-05-22T14:34:24.929+0000] {subprocess.py:92} INFO -     SparkContext(conf=conf or SparkConf())
+[2025-05-22T14:34:24.930+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 144, in __init__
+[2025-05-22T14:34:24.931+0000] {subprocess.py:92} INFO -     SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+[2025-05-22T14:34:24.932+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 331, in _ensure_initialized
+[2025-05-22T14:34:24.933+0000] {subprocess.py:92} INFO -     SparkContext._gateway = gateway or launch_gateway(conf)
+[2025-05-22T14:34:24.933+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 108, in launch_gateway
+[2025-05-22T14:34:24.934+0000] {subprocess.py:92} INFO -     raise Exception("Java gateway process exited before sending its port number")
+[2025-05-22T14:34:24.935+0000] {subprocess.py:92} INFO - Exception: Java gateway process exited before sending its port number
+[2025-05-22T14:34:24.993+0000] {subprocess.py:96} INFO - Command exited with return code 1
+[2025-05-22T14:34:25.012+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T14:34:25.018+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Extract_Data, execution_date=20250522T141500, start_date=20250522T143417, end_date=20250522T143425
+[2025-05-22T14:34:25.037+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 3 for task Extract_Data (Bash command failed. The command returned a non-zero exit code 1.; 235)
+[2025-05-22T14:34:25.061+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-05-22T14:34:25.110+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-05-22T14:38:59.503+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [queued]>
+[2025-05-22T14:38:59.520+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [queued]>
+[2025-05-22T14:38:59.521+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:38:59.521+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-05-22T14:38:59.522+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:38:59.545+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Extract_Data> on 2025-05-22 14:15:00+00:00
+[2025-05-22T14:38:59.552+0000] {standard_task_runner.py:52} INFO - Started process 254 to run task
+[2025-05-22T14:38:59.556+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Extract_Data', 'scheduled__2025-05-22T14:15:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmprs1_dk3s', '--error-file', '/tmp/tmpoh38i066']
+[2025-05-22T14:38:59.558+0000] {standard_task_runner.py:80} INFO - Job 2: Subtask Extract_Data
+[2025-05-22T14:38:59.639+0000] {task_command.py:371} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Extract_Data scheduled__2025-05-22T14:15:00+00:00 [running]> on host 0b2a8c3db162
+[2025-05-22T14:38:59.730+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Scheduler_Traffict_Accident
+AIRFLOW_CTX_TASK_ID=Extract_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-22T14:15:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-22T14:15:00+00:00
+[2025-05-22T14:38:59.733+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-22T14:38:59.734+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Extract_Data.py']
+[2025-05-22T14:38:59.745+0000] {subprocess.py:85} INFO - Output:
+[2025-05-22T14:39:01.697+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T14:39:01.698+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T14:39:01.699+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T14:39:01.699+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T14:39:01.700+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T14:39:01.860+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T14:39:01.954+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T14:39:01.954+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T14:39:01.958+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T14:39:01.960+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-031af760-5eba-4337-a031-9a15d3836e4c;1.0
+[2025-05-22T14:39:01.961+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:39:04.111+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T14:39:05.978+0000] {subprocess.py:92} INFO - downloading https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar ...
+[2025-05-22T14:39:07.185+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 4016ms :: artifacts dl 1210ms
+[2025-05-22T14:39:07.186+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-22T14:39:07.187+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T14:39:07.188+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:39:07.189+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T14:39:07.191+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T14:39:07.192+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:39:07.193+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   1   |   1   |   0   ||   1   |   0   |
+[2025-05-22T14:39:07.194+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:39:07.195+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.196+0000] {subprocess.py:92} INFO - :: problems summary ::
+[2025-05-22T14:39:07.197+0000] {subprocess.py:92} INFO - :::: WARNINGS
+[2025-05-22T14:39:07.198+0000] {subprocess.py:92} INFO - 	problem while downloading module descriptor: https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.pom: Downloaded file size doesn't match expected Content Length for https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.pom. Please retry. (221ms)
+[2025-05-22T14:39:07.200+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.200+0000] {subprocess.py:92} INFO - 		module not found: org.checkerframework#checker-qual;3.31.0
+[2025-05-22T14:39:07.201+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.201+0000] {subprocess.py:92} INFO - 	==== local-m2-cache: tried
+[2025-05-22T14:39:07.202+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.203+0000] {subprocess.py:92} INFO - 	  file:/home/***/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.pom
+[2025-05-22T14:39:07.204+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.205+0000] {subprocess.py:92} INFO - 	  -- artifact org.checkerframework#checker-qual;3.31.0!checker-qual.jar:
+[2025-05-22T14:39:07.206+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.206+0000] {subprocess.py:92} INFO - 	  file:/home/***/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar
+[2025-05-22T14:39:07.207+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.208+0000] {subprocess.py:92} INFO - 	==== local-ivy-cache: tried
+[2025-05-22T14:39:07.208+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.209+0000] {subprocess.py:92} INFO - 	  /home/***/.ivy2/local/org.checkerframework/checker-qual/3.31.0/ivys/ivy.xml
+[2025-05-22T14:39:07.210+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.212+0000] {subprocess.py:92} INFO - 	  -- artifact org.checkerframework#checker-qual;3.31.0!checker-qual.jar:
+[2025-05-22T14:39:07.213+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.213+0000] {subprocess.py:92} INFO - 	  /home/***/.ivy2/local/org.checkerframework/checker-qual/3.31.0/jars/checker-qual.jar
+[2025-05-22T14:39:07.214+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.216+0000] {subprocess.py:92} INFO - 	==== central: tried
+[2025-05-22T14:39:07.217+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.219+0000] {subprocess.py:92} INFO - 	  https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.pom
+[2025-05-22T14:39:07.220+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.221+0000] {subprocess.py:92} INFO - 	==== spark-packages: tried
+[2025-05-22T14:39:07.222+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.224+0000] {subprocess.py:92} INFO - 	  https://repos.spark-packages.org/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.pom
+[2025-05-22T14:39:07.225+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.226+0000] {subprocess.py:92} INFO - 	  -- artifact org.checkerframework#checker-qual;3.31.0!checker-qual.jar:
+[2025-05-22T14:39:07.227+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.229+0000] {subprocess.py:92} INFO - 	  https://repos.spark-packages.org/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar
+[2025-05-22T14:39:07.229+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.230+0000] {subprocess.py:92} INFO - 		[FAILED     ] org.postgresql#postgresql;42.6.0!postgresql.jar: Downloaded file size doesn't match expected Content Length for https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar. Please retry. (1207ms)
+[2025-05-22T14:39:07.231+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.233+0000] {subprocess.py:92} INFO - 		[FAILED     ] org.postgresql#postgresql;42.6.0!postgresql.jar: Downloaded file size doesn't match expected Content Length for https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar. Please retry. (1207ms)
+[2025-05-22T14:39:07.233+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.234+0000] {subprocess.py:92} INFO - 	==== central: tried
+[2025-05-22T14:39:07.235+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.236+0000] {subprocess.py:92} INFO - 	  https://repo1.maven.org/maven2/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar
+[2025-05-22T14:39:07.237+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.238+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.239+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.241+0000] {subprocess.py:92} INFO - 		::          UNRESOLVED DEPENDENCIES         ::
+[2025-05-22T14:39:07.242+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.242+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.243+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.243+0000] {subprocess.py:92} INFO - 		:: org.checkerframework#checker-qual;3.31.0: not found
+[2025-05-22T14:39:07.244+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.245+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.246+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.247+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.249+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.250+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.251+0000] {subprocess.py:92} INFO - 		::              FAILED DOWNLOADS            ::
+[2025-05-22T14:39:07.252+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.253+0000] {subprocess.py:92} INFO - 		:: ^ see resolution messages for details  ^ ::
+[2025-05-22T14:39:07.254+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.255+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.255+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.256+0000] {subprocess.py:92} INFO - 		:: org.postgresql#postgresql;42.6.0!postgresql.jar
+[2025-05-22T14:39:07.257+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.258+0000] {subprocess.py:92} INFO - 		::::::::::::::::::::::::::::::::::::::::::::::
+[2025-05-22T14:39:07.258+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.259+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.260+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:39:07.261+0000] {subprocess.py:92} INFO - :: USE VERBOSE OR DEBUG MESSAGE LEVEL FOR MORE DETAILS
+[2025-05-22T14:39:07.262+0000] {subprocess.py:92} INFO - Exception in thread "main" java.lang.RuntimeException: [unresolved dependency: org.checkerframework#checker-qual;3.31.0: not found, download failed: org.postgresql#postgresql;42.6.0!postgresql.jar]
+[2025-05-22T14:39:07.263+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmitUtils$.resolveMavenCoordinates(SparkSubmit.scala:1429)
+[2025-05-22T14:39:07.263+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.DependencyUtils$.resolveMavenDependencies(DependencyUtils.scala:54)
+[2025-05-22T14:39:07.264+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.prepareSubmitEnvironment(SparkSubmit.scala:308)
+[2025-05-22T14:39:07.264+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:894)
+[2025-05-22T14:39:07.265+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.doRunMain$1(SparkSubmit.scala:180)
+[2025-05-22T14:39:07.266+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.submit(SparkSubmit.scala:203)
+[2025-05-22T14:39:07.267+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.doSubmit(SparkSubmit.scala:90)
+[2025-05-22T14:39:07.268+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit$$anon$2.doSubmit(SparkSubmit.scala:1039)
+[2025-05-22T14:39:07.268+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:1048)
+[2025-05-22T14:39:07.269+0000] {subprocess.py:92} INFO - 	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+[2025-05-22T14:39:07.296+0000] {subprocess.py:92} INFO - Traceback (most recent call last):
+[2025-05-22T14:39:07.297+0000] {subprocess.py:92} INFO -   File "/opt/***/scripts/Extract_Data.py", line 9, in <module>
+[2025-05-22T14:39:07.298+0000] {subprocess.py:92} INFO -     .config("spark.jars.packages", "org.postgresql:postgresql:42.6.0") \
+[2025-05-22T14:39:07.299+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/session.py", line 228, in getOrCreate
+[2025-05-22T14:39:07.300+0000] {subprocess.py:92} INFO -     sc = SparkContext.getOrCreate(sparkConf)
+[2025-05-22T14:39:07.300+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 384, in getOrCreate
+[2025-05-22T14:39:07.301+0000] {subprocess.py:92} INFO -     SparkContext(conf=conf or SparkConf())
+[2025-05-22T14:39:07.302+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 144, in __init__
+[2025-05-22T14:39:07.304+0000] {subprocess.py:92} INFO -     SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+[2025-05-22T14:39:07.304+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/context.py", line 331, in _ensure_initialized
+[2025-05-22T14:39:07.305+0000] {subprocess.py:92} INFO -     SparkContext._gateway = gateway or launch_gateway(conf)
+[2025-05-22T14:39:07.306+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 108, in launch_gateway
+[2025-05-22T14:39:07.307+0000] {subprocess.py:92} INFO -     raise Exception("Java gateway process exited before sending its port number")
+[2025-05-22T14:39:07.307+0000] {subprocess.py:92} INFO - Exception: Java gateway process exited before sending its port number
+[2025-05-22T14:39:07.356+0000] {subprocess.py:96} INFO - Command exited with return code 1
+[2025-05-22T14:39:07.375+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T14:39:07.381+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Extract_Data, execution_date=20250522T141500, start_date=20250522T143859, end_date=20250522T143907
+[2025-05-22T14:39:07.396+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 2 for task Extract_Data (Bash command failed. The command returned a non-zero exit code 1.; 254)
+[2025-05-22T14:39:07.409+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-05-22T14:39:07.453+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

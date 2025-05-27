@@ -1,0 +1,102 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expectation-crash-dataset",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "crash_date"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "road_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_total",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_fatal",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_incapacitating",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_non_incapacitating",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_reported_not_evident",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "injuries_no_indication",
+        "type_list": [
+          "integer",
+          "float",
+          "int64",
+          "float64"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

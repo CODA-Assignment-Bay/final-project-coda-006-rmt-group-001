@@ -1,0 +1,58 @@
+[2025-05-22T15:18:13.531+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:18:13.551+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Data manual__2025-05-22T15:17:26.089500+00:00 [queued]>
+[2025-05-22T15:18:13.553+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T15:18:13.585+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Validation_Data> on 2025-05-22 15:17:26.089500+00:00
+[2025-05-22T15:18:13.595+0000] {standard_task_runner.py:57} INFO - Started process 890 to run task
+[2025-05-22T15:18:13.603+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Validation_Data', 'manual__2025-05-22T15:17:26.089500+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpmxi9n3v6']
+[2025-05-22T15:18:13.611+0000] {standard_task_runner.py:85} INFO - Job 5: Subtask Validation_Data
+[2025-05-22T15:18:13.739+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Validation_Data manual__2025-05-22T15:17:26.089500+00:00 [running]> on host 68da71f009b0
+[2025-05-22T15:18:13.908+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Validation_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:17:26.089500+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-05-22T15:17:26.089500+00:00'
+[2025-05-22T15:18:13.911+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T15:18:13.914+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/build_expectations.py']
+[2025-05-22T15:18:13.933+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T15:18:25.005+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1842.84it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1431.99it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1287.78it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1150.39it/s]
+[2025-05-22T15:18:25.046+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/6 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/6 [00:00<?, ?it/s]Calculating Metrics:  33%|███▎      | 2/6 [00:00<00:00, 2440.68it/s]Calculating Metrics:  33%|███▎      | 2/6 [00:00<00:00, 781.13it/s] Calculating Metrics:  50%|█████     | 3/6 [00:00<00:00, 994.38it/s]Calculating Metrics:  50%|█████     | 3/6 [00:00<00:00, 682.78it/s]Calculating Metrics:  67%|██████▋   | 4/6 [00:00<00:00, 312.90it/s]Calculating Metrics:  67%|██████▋   | 4/6 [00:00<00:00, 279.74it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 332.45it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 307.17it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 304.81it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 302.02it/s]
+[2025-05-22T15:18:25.079+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/6 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/6 [00:00<?, ?it/s]Calculating Metrics:  33%|███▎      | 2/6 [00:00<00:00, 3546.98it/s]Calculating Metrics:  33%|███▎      | 2/6 [00:00<00:00, 934.14it/s] Calculating Metrics:  50%|█████     | 3/6 [00:00<00:00, 1248.06it/s]Calculating Metrics:  50%|█████     | 3/6 [00:00<00:00, 660.49it/s] Calculating Metrics:  67%|██████▋   | 4/6 [00:00<00:00, 740.13it/s]Calculating Metrics:  67%|██████▋   | 4/6 [00:00<00:00, 577.99it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 569.35it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 493.85it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 487.83it/s]Calculating Metrics: 100%|██████████| 6/6 [00:00<00:00, 481.61it/s]
+[2025-05-22T15:18:25.092+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1300.16it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1045.18it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 968.89it/s] Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 880.05it/s]
+[2025-05-22T15:18:25.104+0000] {subprocess.py:93} INFO - injuries_total: Success
+[2025-05-22T15:18:25.105+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1552.30it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1265.25it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1189.54it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1095.69it/s]
+[2025-05-22T15:18:25.118+0000] {subprocess.py:93} INFO - injuries_fatal: Success
+[2025-05-22T15:18:25.119+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 2185.67it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1741.10it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1622.55it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1483.66it/s]
+[2025-05-22T15:18:25.130+0000] {subprocess.py:93} INFO - injuries_incapacitating: Success
+[2025-05-22T15:18:25.131+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1998.24it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1594.79it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1488.93it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1366.22it/s]
+[2025-05-22T15:18:25.142+0000] {subprocess.py:93} INFO - injuries_non_incapacitating: Success
+[2025-05-22T15:18:25.143+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 2051.00it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1651.30it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1467.57it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1328.57it/s]
+[2025-05-22T15:18:25.153+0000] {subprocess.py:93} INFO - injuries_reported_not_evident: Success
+[2025-05-22T15:18:25.154+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 2060.07it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1632.66it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1525.76it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1350.39it/s]
+[2025-05-22T15:18:25.564+0000] {subprocess.py:93} INFO - injuries_no_indication: Success
+[2025-05-22T15:18:25.565+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/1 [00:00<?, ?it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 3374.34it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 2442.81it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 2181.13it/s]Calculating Metrics: 100%|██████████| 1/1 [00:00<00:00, 1930.19it/s]
+[2025-05-22T15:18:25.565+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-22T15:18:25.566+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/build_expectations.py", line 84, in <module>
+[2025-05-22T15:18:25.571+0000] {subprocess.py:93} INFO -     df_date = pd.read_csv('datasets/Clean_Crash_Date_Data.csv') # Make sure path files are correct
+[2025-05-22T15:18:25.571+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:18:25.572+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+[2025-05-22T15:18:25.573+0000] {subprocess.py:93} INFO -     return _read(filepath_or_buffer, kwds)
+[2025-05-22T15:18:25.573+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:18:25.574+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+[2025-05-22T15:18:25.575+0000] {subprocess.py:93} INFO -     parser = TextFileReader(filepath_or_buffer, **kwds)
+[2025-05-22T15:18:25.576+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:18:25.577+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+[2025-05-22T15:18:25.577+0000] {subprocess.py:93} INFO -     self._engine = self._make_engine(f, self.engine)
+[2025-05-22T15:18:25.578+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2025-05-22T15:18:25.578+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+[2025-05-22T15:18:25.579+0000] {subprocess.py:93} INFO -     self.handles = get_handle(
+[2025-05-22T15:18:25.580+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^
+[2025-05-22T15:18:25.580+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pandas/io/common.py", line 863, in get_handle
+[2025-05-22T15:18:25.581+0000] {subprocess.py:93} INFO -     handle = open(
+[2025-05-22T15:18:25.581+0000] {subprocess.py:93} INFO -              ^^^^^
+[2025-05-22T15:18:25.581+0000] {subprocess.py:93} INFO - PermissionError: [Errno 13] Permission denied: 'datasets/Clean_Crash_Date_Data.csv'
+[2025-05-22T15:18:26.861+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-22T15:18:26.876+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T15:18:26.884+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Validation_Data, execution_date=20250522T151726, start_date=20250522T151813, end_date=20250522T151826
+[2025-05-22T15:18:26.905+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 5 for task Validation_Data (Bash command failed. The command returned a non-zero exit code 1.; 890)
+[2025-05-22T15:18:26.950+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-22T15:18:27.002+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

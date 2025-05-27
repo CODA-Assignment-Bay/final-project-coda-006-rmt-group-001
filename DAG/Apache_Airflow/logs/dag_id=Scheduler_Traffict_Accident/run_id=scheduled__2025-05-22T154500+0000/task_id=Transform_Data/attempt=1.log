@@ -1,0 +1,105 @@
+[2025-05-22T16:00:10.170+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Transform_Data scheduled__2025-05-22T15:45:00+00:00 [queued]>
+[2025-05-22T16:00:10.193+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Transform_Data scheduled__2025-05-22T15:45:00+00:00 [queued]>
+[2025-05-22T16:00:10.194+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T16:00:10.232+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Transform_Data> on 2025-05-22 15:45:00+00:00
+[2025-05-22T16:00:10.254+0000] {standard_task_runner.py:57} INFO - Started process 969 to run task
+[2025-05-22T16:00:10.258+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Transform_Data', 'scheduled__2025-05-22T15:45:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpw9imnlpd']
+[2025-05-22T16:00:10.263+0000] {standard_task_runner.py:85} INFO - Job 6: Subtask Transform_Data
+[2025-05-22T16:00:10.373+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Transform_Data scheduled__2025-05-22T15:45:00+00:00 [running]> on host 1f18d06af689
+[2025-05-22T16:00:10.506+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Transform_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T15:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-22T15:45:00+00:00'
+[2025-05-22T16:00:10.508+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T16:00:10.510+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Transform_Data.py']
+[2025-05-22T16:00:10.532+0000] {subprocess.py:86} INFO - Output:
+[2025-05-22T16:00:12.478+0000] {subprocess.py:93} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T16:00:12.481+0000] {subprocess.py:93} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T16:00:12.482+0000] {subprocess.py:93} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T16:00:12.483+0000] {subprocess.py:93} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T16:00:12.485+0000] {subprocess.py:93} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T16:00:12.862+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.11/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T16:00:13.004+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T16:00:13.005+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T16:00:13.013+0000] {subprocess.py:93} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T16:00:13.015+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-d7e1ca85-dbb2-43e0-b764-cf133574beb8;1.0
+[2025-05-22T16:00:13.017+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T16:00:13.148+0000] {subprocess.py:93} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T16:00:13.185+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T16:00:13.214+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 188ms :: artifacts dl 9ms
+[2025-05-22T16:00:13.215+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2025-05-22T16:00:13.215+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T16:00:13.218+0000] {subprocess.py:93} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T16:00:13.218+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:00:13.219+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T16:00:13.219+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T16:00:13.220+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:00:13.221+0000] {subprocess.py:93} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T16:00:13.221+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2025-05-22T16:00:13.222+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-d7e1ca85-dbb2-43e0-b764-cf133574beb8
+[2025-05-22T16:00:13.223+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2025-05-22T16:00:13.230+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 2 already retrieved (0kB/10ms)
+[2025-05-22T16:00:13.570+0000] {subprocess.py:93} INFO - 25/05/22 16:00:13 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T16:00:14.043+0000] {subprocess.py:93} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T16:00:14.044+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2025-05-22T16:00:14.044+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T16:00:15.899+0000] {subprocess.py:93} INFO - 25/05/22 16:00:15 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+[2025-05-22T16:00:26.111+0000] {subprocess.py:93} INFO - [Stage 1:>                                                        (0 + 13) / 13][Stage 1:====>                                                    (1 + 12) / 13][Stage 1:========>                                                (2 + 11) / 13]                                                                                25/05/22 16:00:26 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2025-05-22T16:00:26.228+0000] {subprocess.py:93} INFO - 25/05/22 16:00:26 WARN FileUtil: Failed to delete file or dir [/opt/***/data/_tmp_output]: it still exists.
+[2025-05-22T16:00:26.236+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2025-05-22T16:00:26.236+0000] {subprocess.py:93} INFO -   File "/opt/***/scripts/Transform_Data.py", line 80, in <module>
+[2025-05-22T16:00:26.239+0000] {subprocess.py:93} INFO -     Crash_Data.coalesce(1).write.mode("overwrite").option("header", "true").csv(tmp_path)
+[2025-05-22T16:00:26.240+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/readwriter.py", line 1372, in csv
+[2025-05-22T16:00:26.241+0000] {subprocess.py:93} INFO -     self._jwrite.csv(path)
+[2025-05-22T16:00:26.241+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/py4j/java_gateway.py", line 1304, in __call__
+[2025-05-22T16:00:26.242+0000] {subprocess.py:93} INFO -     return_value = get_return_value(
+[2025-05-22T16:00:26.242+0000] {subprocess.py:93} INFO -                    ^^^^^^^^^^^^^^^^^
+[2025-05-22T16:00:26.243+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/pyspark/sql/utils.py", line 111, in deco
+[2025-05-22T16:00:26.244+0000] {subprocess.py:93} INFO -     return f(*a, **kw)
+[2025-05-22T16:00:26.244+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2025-05-22T16:00:26.245+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.11/site-packages/py4j/protocol.py", line 326, in get_return_value
+[2025-05-22T16:00:26.245+0000] {subprocess.py:93} INFO -     raise Py4JJavaError(
+[2025-05-22T16:00:26.246+0000] {subprocess.py:93} INFO - py4j.protocol.Py4JJavaError: An error occurred while calling o180.csv.
+[2025-05-22T16:00:26.247+0000] {subprocess.py:93} INFO - : java.io.IOException: Unable to clear output directory file:/opt/***/data/_tmp_output prior to writing to it
+[2025-05-22T16:00:26.247+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.deleteMatchingPartitions(InsertIntoHadoopFsRelationCommand.scala:238)
+[2025-05-22T16:00:26.248+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:130)
+[2025-05-22T16:00:26.249+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:108)
+[2025-05-22T16:00:26.250+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:106)
+[2025-05-22T16:00:26.250+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:131)
+[2025-05-22T16:00:26.251+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$execute$1(SparkPlan.scala:180)
+[2025-05-22T16:00:26.251+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.$anonfun$executeQuery$1(SparkPlan.scala:218)
+[2025-05-22T16:00:26.252+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+[2025-05-22T16:00:26.252+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:215)
+[2025-05-22T16:00:26.253+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:176)
+[2025-05-22T16:00:26.254+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:132)
+[2025-05-22T16:00:26.254+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:131)
+[2025-05-22T16:00:26.255+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.$anonfun$runCommand$1(DataFrameWriter.scala:989)
+[2025-05-22T16:00:26.256+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$5(SQLExecution.scala:103)
+[2025-05-22T16:00:26.256+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:163)
+[2025-05-22T16:00:26.257+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.$anonfun$withNewExecutionId$1(SQLExecution.scala:90)
+[2025-05-22T16:00:26.257+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.SparkSession.withActive(SparkSession.scala:775)
+[2025-05-22T16:00:26.258+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:64)
+[2025-05-22T16:00:26.258+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:989)
+[2025-05-22T16:00:26.259+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:438)
+[2025-05-22T16:00:26.259+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.saveInternal(DataFrameWriter.scala:415)
+[2025-05-22T16:00:26.260+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:293)
+[2025-05-22T16:00:26.260+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.DataFrameWriter.csv(DataFrameWriter.scala:979)
+[2025-05-22T16:00:26.261+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[2025-05-22T16:00:26.261+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[2025-05-22T16:00:26.262+0000] {subprocess.py:93} INFO - 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[2025-05-22T16:00:26.262+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[2025-05-22T16:00:26.263+0000] {subprocess.py:93} INFO - 	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+[2025-05-22T16:00:26.263+0000] {subprocess.py:93} INFO - 	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+[2025-05-22T16:00:26.264+0000] {subprocess.py:93} INFO - 	at py4j.Gateway.invoke(Gateway.java:282)
+[2025-05-22T16:00:26.265+0000] {subprocess.py:93} INFO - 	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+[2025-05-22T16:00:26.266+0000] {subprocess.py:93} INFO - 	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+[2025-05-22T16:00:26.267+0000] {subprocess.py:93} INFO - 	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+[2025-05-22T16:00:26.268+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:829)
+[2025-05-22T16:00:26.268+0000] {subprocess.py:93} INFO - 
+[2025-05-22T16:00:26.761+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-05-22T16:00:26.780+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 210, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T16:00:26.789+0000] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Transform_Data, execution_date=20250522T154500, start_date=20250522T160010, end_date=20250522T160026
+[2025-05-22T16:00:26.813+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 6 for task Transform_Data (Bash command failed. The command returned a non-zero exit code 1.; 969)
+[2025-05-22T16:00:26.843+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2025-05-22T16:00:26.875+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,37 @@
+[2025-05-22T18:17:19.550+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Datamart_Data scheduled__2025-05-22T18:00:00+00:00 [queued]>
+[2025-05-22T18:17:19.560+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Scheduler_Traffict_Accident.Validation_Datamart_Data scheduled__2025-05-22T18:00:00+00:00 [queued]>
+[2025-05-22T18:17:19.562+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2025-05-22T18:17:19.575+0000] {taskinstance.py:1382} INFO - Executing <Task(BashOperator): Validation_Datamart_Data> on 2025-05-22 18:00:00+00:00
+[2025-05-22T18:17:19.581+0000] {standard_task_runner.py:57} INFO - Started process 6902 to run task
+[2025-05-22T18:17:19.583+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Validation_Datamart_Data', 'scheduled__2025-05-22T18:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpn8pxn0gk']
+[2025-05-22T18:17:19.588+0000] {standard_task_runner.py:85} INFO - Job 25: Subtask Validation_Datamart_Data
+[2025-05-22T18:17:19.667+0000] {task_command.py:416} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Validation_Datamart_Data scheduled__2025-05-22T18:00:00+00:00 [running]> on host 2d3af573cb97
+[2025-05-22T18:17:19.740+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Hisham' AIRFLOW_CTX_DAG_ID='Scheduler_Traffict_Accident' AIRFLOW_CTX_TASK_ID='Validation_Datamart_Data' AIRFLOW_CTX_EXECUTION_DATE='2025-05-22T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-05-22T18:00:00+00:00'
+[2025-05-22T18:17:19.757+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-05-22T18:17:19.759+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/validation-datamart.py']
+[2025-05-22T18:17:19.769+0000] {subprocess.py:86} INFO - Output:
+[2025-05-23T06:35:52.970+0000] {subprocess.py:93} INFO - Calculating Metrics:   0%|          | 0/2 [00:00<?, ?it/s]Calculating Metrics:   0%|          | 0/2 [00:00<?, ?it/s]Calculating Metrics:  50%|█████     | 1/2 [00:00<00:00, 1624.44it/s]Calculating Metrics:  50%|█████     | 1/2 [00:00<00:00, 740.65it/s] Calculating Metrics: 100%|██████████| 2/2 [00:00<00:00, 1240.37it/s]Calculating Metrics: 100%|██████████| 2/2 [00:00<00:00, 956.95it/s] Calculating Metrics: 100%|██████████| 2/2 [00:00<00:00, 890.13it/s]Calculating Metrics: 100%|██████████| 2/2 [00:00<00:00, 848.62it/s]
+[2025-05-23T06:35:58.857+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2025-05-23T06:35:58.869+0000] {process_utils.py:131} INFO - Sending 15 to group 6902. PIDs of all processes in the group: [6903, 6904, 6902]
+[2025-05-23T06:35:58.871+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 6902
+[2025-05-23T06:35:58.875+0000] {taskinstance.py:1632} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-05-23T06:35:58.880+0000] {subprocess.py:104} INFO - Sending SIGTERM signal to process group
+[2025-05-23T06:35:58.961+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/bash.py", line 201, in execute
+    result = self.subprocess_hook.run_command(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/hooks/subprocess.py", line 91, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b""):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 1634, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-05-23T06:35:59.028+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=Scheduler_Traffict_Accident, task_id=Validation_Datamart_Data, execution_date=20250522T180000, start_date=20250522T181719, end_date=20250523T063559
+[2025-05-23T06:35:59.090+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 25 for task Validation_Datamart_Data (Task received SIGTERM signal; 6902)
+[2025-05-23T06:35:59.540+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=6902, status='terminated', exitcode=1, started='18:17:19') (6902) terminated with exit code 1
+[2025-05-23T06:36:58.888+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=6903, name='sudo', status='sleeping', started='18:17:19') did not respond to SIGTERM. Trying SIGKILL
+[2025-05-23T06:36:58.895+0000] {process_utils.py:149} WARNING - process psutil.Process(pid=6904, name='python', status='sleeping', started='18:17:19') did not respond to SIGTERM. Trying SIGKILL
+[2025-05-23T06:36:58.896+0000] {process_utils.py:86} INFO - Sending the signal 9 to group 6902
+[2025-05-23T06:36:58.897+0000] {process_utils.py:100} INFO - Sending the signal 9 to process 6902 as process group is missing.
+[2025-05-23T06:37:58.899+0000] {process_utils.py:160} ERROR - Process psutil.Process(pid=6903, name='sudo', status='sleeping', started='18:17:19') (6903) could not be killed. Giving up.
+[2025-05-23T06:37:58.903+0000] {process_utils.py:160} ERROR - Process psutil.Process(pid=6904, name='python', status='sleeping', started='18:17:19') (6904) could not be killed. Giving up.

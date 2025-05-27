@@ -1,0 +1,83 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "expectation-crash_factor-dataset",
+  "expectations": [
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "total_crashes"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "avg_fatal_injuries"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_to_exist",
+      "kwargs": {
+        "column": "sum_fatal_injuries"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_injuries_incapacitating",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_injuries_non_incapacitating",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_injuries_reported_not_evident",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "total_injuries_no_indication",
+        "type_list": [
+          "int64",
+          "float",
+          "integer",
+          "float64"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.18.19"
+  }
+}

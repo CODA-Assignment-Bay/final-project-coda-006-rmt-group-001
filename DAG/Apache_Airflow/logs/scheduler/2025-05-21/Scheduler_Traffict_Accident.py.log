@@ -1,0 +1,74 @@
+[2025-05-21T15:50:23.028+0000] {processor.py:153} INFO - Started process (PID=215) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:23.030+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:50:23.031+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.031+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:23.066+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:23.181+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.181+0000] {manager.py:508} INFO - Created Permission View: can read on DAG:Scheduler_Traffict_Accident
+[2025-05-21T15:50:23.193+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.193+0000] {manager.py:508} INFO - Created Permission View: can delete on DAG:Scheduler_Traffict_Accident
+[2025-05-21T15:50:23.203+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.203+0000] {manager.py:508} INFO - Created Permission View: can edit on DAG:Scheduler_Traffict_Accident
+[2025-05-21T15:50:23.204+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.204+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:50:23.215+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.215+0000] {dag.py:2448} INFO - Creating ORM DAG for Scheduler_Traffict_Accident
+[2025-05-21T15:50:23.231+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:23.231+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:50:23.253+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.230 seconds
+[2025-05-21T15:50:53.522+0000] {processor.py:153} INFO - Started process (PID=225) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:53.523+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:50:53.524+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:53.524+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:53.552+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:50:53.583+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:53.583+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:50:53.605+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:50:53.605+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:50:53.620+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.101 seconds
+[2025-05-21T15:51:23.806+0000] {processor.py:153} INFO - Started process (PID=235) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:23.807+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:51:23.808+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:23.808+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:23.844+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:23.876+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:23.876+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:51:23.900+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:23.899+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:51:23.917+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.114 seconds
+[2025-05-21T15:51:54.115+0000] {processor.py:153} INFO - Started process (PID=646) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:54.117+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:51:54.118+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:54.117+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:54.164+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:51:54.203+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:54.203+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:51:54.236+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:51:54.236+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:51:54.252+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.141 seconds
+[2025-05-21T15:52:24.323+0000] {processor.py:153} INFO - Started process (PID=1214) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:24.324+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:52:24.325+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:24.325+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:24.362+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:24.430+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:24.430+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:52:24.464+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:24.463+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:52:24.488+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.168 seconds
+[2025-05-21T15:52:54.697+0000] {processor.py:153} INFO - Started process (PID=1288) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:54.698+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:52:54.699+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:54.699+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:54.718+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:52:54.748+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:54.748+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:52:54.773+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:52:54.773+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:52:54.791+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.098 seconds
+[2025-05-21T15:53:25.010+0000] {processor.py:153} INFO - Started process (PID=1297) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:25.012+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:53:25.014+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:25.014+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:25.068+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:25.106+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:25.106+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:53:25.134+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:25.134+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:53:25.151+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.148 seconds
+[2025-05-21T15:53:55.354+0000] {processor.py:153} INFO - Started process (PID=1308) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:55.358+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:53:55.359+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:55.359+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:55.397+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:53:55.431+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:55.431+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:53:55.459+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:53:55.459+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:53:55.477+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.126 seconds
+[2025-05-21T15:54:25.731+0000] {processor.py:153} INFO - Started process (PID=1318) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:25.732+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:54:25.733+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:25.733+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:25.753+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:25.779+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:25.779+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:54:25.802+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:25.802+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:54:25.815+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.087 seconds
+[2025-05-21T15:54:56.103+0000] {processor.py:153} INFO - Started process (PID=1327) to work on /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:56.106+0000] {processor.py:640} INFO - Processing file /opt/airflow/dags/Scheduler_Traffict_Accident.py for tasks to queue
+[2025-05-21T15:54:56.110+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:56.110+0000] {dagbag.py:508} INFO - Filling up the DagBag from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:56.238+0000] {processor.py:650} INFO - DAG(s) dict_keys(['Scheduler_Traffict_Accident']) retrieved from /opt/airflow/dags/Scheduler_Traffict_Accident.py
+[2025-05-21T15:54:56.277+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:56.277+0000] {dag.py:2429} INFO - Sync 1 DAGs
+[2025-05-21T15:54:56.302+0000] {logging_mixin.py:115} INFO - [2025-05-21T15:54:56.302+0000] {dag.py:2981} INFO - Setting next_dagrun for Scheduler_Traffict_Accident to 2025-05-21T15:30:00+00:00, run_after=2025-05-21T15:45:00+00:00
+[2025-05-21T15:54:56.325+0000] {processor.py:161} INFO - Processing /opt/airflow/dags/Scheduler_Traffict_Accident.py took 0.228 seconds

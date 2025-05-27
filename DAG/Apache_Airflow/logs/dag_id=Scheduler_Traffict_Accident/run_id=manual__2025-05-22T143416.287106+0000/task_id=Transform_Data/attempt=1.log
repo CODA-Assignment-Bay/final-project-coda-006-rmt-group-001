@@ -1,0 +1,82 @@
+[2025-05-22T14:34:34.593+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Transform_Data manual__2025-05-22T14:34:16.287106+00:00 [queued]>
+[2025-05-22T14:34:34.610+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Scheduler_Traffict_Accident.Transform_Data manual__2025-05-22T14:34:16.287106+00:00 [queued]>
+[2025-05-22T14:34:34.611+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:34:34.613+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-05-22T14:34:34.614+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-22T14:34:34.633+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Transform_Data> on 2025-05-22 14:34:16.287106+00:00
+[2025-05-22T14:34:34.640+0000] {standard_task_runner.py:52} INFO - Started process 539 to run task
+[2025-05-22T14:34:34.645+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Scheduler_Traffict_Accident', 'Transform_Data', 'manual__2025-05-22T14:34:16.287106+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/Scheduler_Traffict_Accident.py', '--cfg-path', '/tmp/tmpdtda372a', '--error-file', '/tmp/tmpatso_nfl']
+[2025-05-22T14:34:34.648+0000] {standard_task_runner.py:80} INFO - Job 4: Subtask Transform_Data
+[2025-05-22T14:34:34.748+0000] {task_command.py:371} INFO - Running <TaskInstance: Scheduler_Traffict_Accident.Transform_Data manual__2025-05-22T14:34:16.287106+00:00 [running]> on host b86084e9eb9d
+[2025-05-22T14:34:34.863+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Scheduler_Traffict_Accident
+AIRFLOW_CTX_TASK_ID=Transform_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-22T14:34:16.287106+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-05-22T14:34:16.287106+00:00
+[2025-05-22T14:34:34.866+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-22T14:34:34.868+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Transform_Data.py']
+[2025-05-22T14:34:34.883+0000] {subprocess.py:85} INFO - Output:
+[2025-05-22T14:34:36.631+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-22T14:34:36.632+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-22T14:34:36.633+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-22T14:34:36.634+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-22T14:34:36.634+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-22T14:34:36.876+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-22T14:34:36.982+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-22T14:34:36.983+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-22T14:34:36.986+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-22T14:34:36.987+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-c102a9c5-e405-4b0c-9ffd-936debc7f7bd;1.0
+[2025-05-22T14:34:36.988+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:34:37.108+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-22T14:34:37.132+0000] {subprocess.py:92} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-22T14:34:37.147+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 156ms :: artifacts dl 4ms
+[2025-05-22T14:34:37.148+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-22T14:34:37.149+0000] {subprocess.py:92} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-22T14:34:37.150+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-22T14:34:37.150+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:37.151+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-22T14:34:37.151+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-22T14:34:37.152+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:37.152+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-22T14:34:37.153+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-22T14:34:37.154+0000] {subprocess.py:92} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-c102a9c5-e405-4b0c-9ffd-936debc7f7bd
+[2025-05-22T14:34:37.154+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-22T14:34:37.157+0000] {subprocess.py:92} INFO - 	0 artifacts copied, 2 already retrieved (0kB/6ms)
+[2025-05-22T14:34:37.361+0000] {subprocess.py:92} INFO - 25/05/22 14:34:37 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-22T14:34:37.662+0000] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-22T14:34:37.663+0000] {subprocess.py:92} INFO - Setting default log level to "WARN".
+[2025-05-22T14:34:37.664+0000] {subprocess.py:92} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-22T14:34:45.594+0000] {subprocess.py:92} INFO - [Stage 1:====>                                                    (1 + 12) / 13][Stage 1:========>                                                (2 + 11) / 13]                                                                                Traceback (most recent call last):
+[2025-05-22T14:34:45.597+0000] {subprocess.py:92} INFO -   File "/opt/***/scripts/Transform_Data.py", line 53, in <module>
+[2025-05-22T14:34:45.598+0000] {subprocess.py:92} INFO -     ).withColumn("crash_week", ceil(dayofmonth("crash_date") / 7.0))
+[2025-05-22T14:34:45.599+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/dataframe.py", line 2455, in withColumn
+[2025-05-22T14:34:45.600+0000] {subprocess.py:92} INFO -     return DataFrame(self._jdf.withColumn(colName, col._jc), self.sql_ctx)
+[2025-05-22T14:34:45.601+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1305, in __call__
+[2025-05-22T14:34:45.601+0000] {subprocess.py:92} INFO -     answer, self.gateway_client, self.target_id, self.name)
+[2025-05-22T14:34:45.603+0000] {subprocess.py:92} INFO -   File "/home/***/.local/lib/python3.7/site-packages/pyspark/sql/utils.py", line 117, in deco
+[2025-05-22T14:34:45.604+0000] {subprocess.py:92} INFO -     raise converted from None
+[2025-05-22T14:34:45.605+0000] {subprocess.py:92} INFO - pyspark.sql.utils.AnalysisException: cannot resolve '`crash_date`' given input columns: [crash_day_of_week, crash_month, crash_year, date];
+[2025-05-22T14:34:45.606+0000] {subprocess.py:92} INFO - 'Project [date#125, crash_year#126, crash_month#127, crash_day_of_week#128, CEIL((dayofmonth('crash_date) / 7.0)) AS crash_week#133]
+[2025-05-22T14:34:45.607+0000] {subprocess.py:92} INFO - +- Project [crash_date#123 AS date#125, year(crash_date#123) AS crash_year#126, month(crash_date#123) AS crash_month#127, dayofweek(crash_date#123) AS crash_day_of_week#128]
+[2025-05-22T14:34:45.608+0000] {subprocess.py:92} INFO -    +- Project [crash_date#123]
+[2025-05-22T14:34:45.609+0000] {subprocess.py:92} INFO -       +- Generate explode(sequence(to_date('start_of_min_month, None), to_date('end_of_max_month, None), None, Some(Etc/UTC))), false, [crash_date#123]
+[2025-05-22T14:34:45.610+0000] {subprocess.py:92} INFO -          +- Project [trunc(min_date#113, MM) AS start_of_min_month#118, last_day(max_date#115) AS end_of_max_month#119]
+[2025-05-22T14:34:45.612+0000] {subprocess.py:92} INFO -             +- Aggregate [min(crash_date#87) AS min_date#113, max(crash_date#87) AS max_date#115]
+[2025-05-22T14:34:45.614+0000] {subprocess.py:92} INFO -                +- Project [to_date('crash_date, Some(MM/dd/yyyy hh:mm:ss a)) AS crash_date#87, traffic_control_device#17, weather_condition#18, lighting_condition#19, first_crash_type#20, trafficway_type#21, alignment#22, roadway_surface_cond#23, road_defect#24, crash_type#25, intersection_related_i#26, damage#27, prim_contributory_cause#28, num_units#29, most_severe_injury#30, injuries_total#31, injuries_fatal#32, injuries_incapacitating#33, injuries_non_incapacitating#34, injuries_reported_not_evident#35, injuries_no_indication#36, crash_hour#37, crash_day_of_week#38, crash_month#39]
+[2025-05-22T14:34:45.615+0000] {subprocess.py:92} INFO -                   +- Relation[crash_date#16,traffic_control_device#17,weather_condition#18,lighting_condition#19,first_crash_type#20,trafficway_type#21,alignment#22,roadway_surface_cond#23,road_defect#24,crash_type#25,intersection_related_i#26,damage#27,prim_contributory_cause#28,num_units#29,most_severe_injury#30,injuries_total#31,injuries_fatal#32,injuries_incapacitating#33,injuries_non_incapacitating#34,injuries_reported_not_evident#35,injuries_no_indication#36,crash_hour#37,crash_day_of_week#38,crash_month#39] csv
+[2025-05-22T14:34:45.616+0000] {subprocess.py:92} INFO - 
+[2025-05-22T14:34:46.127+0000] {subprocess.py:96} INFO - Command exited with return code 1
+[2025-05-22T14:34:46.147+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 197, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-05-22T14:34:46.153+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=Scheduler_Traffict_Accident, task_id=Transform_Data, execution_date=20250522T143416, start_date=20250522T143434, end_date=20250522T143446
+[2025-05-22T14:34:46.170+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 4 for task Transform_Data (Bash command failed. The command returned a non-zero exit code 1.; 539)
+[2025-05-22T14:34:46.217+0000] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-05-22T14:34:46.260+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

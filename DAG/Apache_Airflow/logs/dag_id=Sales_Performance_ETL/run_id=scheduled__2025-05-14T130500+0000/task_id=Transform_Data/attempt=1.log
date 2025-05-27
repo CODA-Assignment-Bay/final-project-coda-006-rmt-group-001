@@ -1,0 +1,59 @@
+[2025-05-14T13:10:02.630+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Sales_Performance_ETL.Transform_Data scheduled__2025-05-14T13:05:00+00:00 [queued]>
+[2025-05-14T13:10:02.641+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: Sales_Performance_ETL.Transform_Data scheduled__2025-05-14T13:05:00+00:00 [queued]>
+[2025-05-14T13:10:02.648+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-14T13:10:02.650+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 2
+[2025-05-14T13:10:02.651+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2025-05-14T13:10:02.671+0000] {taskinstance.py:1389} INFO - Executing <Task(BashOperator): Transform_Data> on 2025-05-14 13:05:00+00:00
+[2025-05-14T13:10:02.677+0000] {standard_task_runner.py:52} INFO - Started process 7091 to run task
+[2025-05-14T13:10:02.681+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Sales_Performance_ETL', 'Transform_Data', 'scheduled__2025-05-14T13:05:00+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/P2M3_Hisham_Audiputra_Suharto_DAG.py', '--cfg-path', '/tmp/tmpw2cuwj13', '--error-file', '/tmp/tmpuk9krnu9']
+[2025-05-14T13:10:02.684+0000] {standard_task_runner.py:80} INFO - Job 31: Subtask Transform_Data
+[2025-05-14T13:10:02.759+0000] {task_command.py:371} INFO - Running <TaskInstance: Sales_Performance_ETL.Transform_Data scheduled__2025-05-14T13:05:00+00:00 [running]> on host 2ca7303636ab
+[2025-05-14T13:10:02.834+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Hisham
+AIRFLOW_CTX_DAG_ID=Sales_Performance_ETL
+AIRFLOW_CTX_TASK_ID=Transform_Data
+AIRFLOW_CTX_EXECUTION_DATE=2025-05-14T13:05:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-05-14T13:05:00+00:00
+[2025-05-14T13:10:02.836+0000] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-05-14T13:10:02.838+0000] {subprocess.py:74} INFO - Running command: ['/bin/bash', '-c', 'sudo -u *** python /opt/***/scripts/Transform_Data.py']
+[2025-05-14T13:10:02.848+0000] {subprocess.py:85} INFO - Output:
+[2025-05-14T13:10:04.340+0000] {subprocess.py:92} INFO - WARNING: An illegal reflective access operation has occurred
+[2025-05-14T13:10:04.341+0000] {subprocess.py:92} INFO - WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/spark-unsafe_2.12-3.1.2.jar) to constructor java.nio.DirectByteBuffer(long,int)
+[2025-05-14T13:10:04.342+0000] {subprocess.py:92} INFO - WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+[2025-05-14T13:10:04.342+0000] {subprocess.py:92} INFO - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[2025-05-14T13:10:04.343+0000] {subprocess.py:92} INFO - WARNING: All illegal access operations will be denied in a future release
+[2025-05-14T13:10:04.480+0000] {subprocess.py:92} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.4.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2025-05-14T13:10:04.554+0000] {subprocess.py:92} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2025-05-14T13:10:04.554+0000] {subprocess.py:92} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2025-05-14T13:10:04.558+0000] {subprocess.py:92} INFO - org.postgresql#postgresql added as a dependency
+[2025-05-14T13:10:04.559+0000] {subprocess.py:92} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-0608a09a-b0e0-424a-aa45-6a2b3277efeb;1.0
+[2025-05-14T13:10:04.559+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-14T13:10:04.647+0000] {subprocess.py:92} INFO - 	found org.postgresql#postgresql;42.6.0 in central
+[2025-05-14T13:10:04.671+0000] {subprocess.py:92} INFO - 	found org.checkerframework#checker-qual;3.31.0 in central
+[2025-05-14T13:10:04.684+0000] {subprocess.py:92} INFO - :: resolution report :: resolve 122ms :: artifacts dl 4ms
+[2025-05-14T13:10:04.685+0000] {subprocess.py:92} INFO - 	:: modules in use:
+[2025-05-14T13:10:04.686+0000] {subprocess.py:92} INFO - 	org.checkerframework#checker-qual;3.31.0 from central in [default]
+[2025-05-14T13:10:04.686+0000] {subprocess.py:92} INFO - 	org.postgresql#postgresql;42.6.0 from central in [default]
+[2025-05-14T13:10:04.687+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-14T13:10:04.688+0000] {subprocess.py:92} INFO - 	|                  |            modules            ||   artifacts   |
+[2025-05-14T13:10:04.688+0000] {subprocess.py:92} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2025-05-14T13:10:04.689+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-14T13:10:04.690+0000] {subprocess.py:92} INFO - 	|      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+[2025-05-14T13:10:04.691+0000] {subprocess.py:92} INFO - 	---------------------------------------------------------------------
+[2025-05-14T13:10:04.691+0000] {subprocess.py:92} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-0608a09a-b0e0-424a-aa45-6a2b3277efeb
+[2025-05-14T13:10:04.692+0000] {subprocess.py:92} INFO - 	confs: [default]
+[2025-05-14T13:10:04.697+0000] {subprocess.py:92} INFO - 	0 artifacts copied, 2 already retrieved (0kB/6ms)
+[2025-05-14T13:10:04.861+0000] {subprocess.py:92} INFO - 25/05/14 13:10:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2025-05-14T13:10:05.086+0000] {subprocess.py:92} INFO - Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+[2025-05-14T13:10:05.087+0000] {subprocess.py:92} INFO - Setting default log level to "WARN".
+[2025-05-14T13:10:05.088+0000] {subprocess.py:92} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2025-05-14T13:10:10.412+0000] {subprocess.py:92} INFO - 25/05/14 13:10:10 WARN WindowExec: No Partition Defined for Window operation! Moving all data to a single partition, this can cause serious performance degradation.
+[2025-05-14T13:10:12.052+0000] {subprocess.py:92} INFO - [Stage 3:>                                                          (0 + 1) / 1]                                                                                Saved: /opt/***/data/Supplement_Sales_Weekly_Expanded_Clean.csv
+[2025-05-14T13:10:12.494+0000] {subprocess.py:96} INFO - Command exited with return code 0
+[2025-05-14T13:10:12.544+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=Sales_Performance_ETL, task_id=Transform_Data, execution_date=20250514T130500, start_date=20250514T131002, end_date=20250514T131012
+[2025-05-14T13:10:12.587+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-05-14T13:10:12.624+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
