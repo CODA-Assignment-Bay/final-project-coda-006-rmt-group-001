@@ -1,6 +1,6 @@
 x-common:
   &common
-  image: airflow-spark
+  image: apache-airflow
   user: "${AIRFLOW_UID}:0"
   env_file: 
     - .env
