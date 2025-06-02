@@ -1,0 +1,2 @@
+# Traffic Crash Analysis
+Developed a data-driven traffic crash analysis project using Kaggle datasets to uncover patterns and factors contributing to road accidents. Built an automated ETL pipeline using Apache Airflow and Spark, with integrated validation steps to ensure data integrity and quality using Great Expectations. Processed data was visualized through interactive dashboards in Tableau and Looker Studio to support evidence-based decision-making and promote safer transportation policies.
